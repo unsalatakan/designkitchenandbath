@@ -34,7 +34,7 @@
 
     .why-choose-one__img {
         position: relative;
-        top: 90px;
+        top: -360px;
         left: 0;
     }
 
@@ -282,7 +282,7 @@
 
     .why-choose-one__img {
         position: relative;
-        top: 90px;
+        top: -360px;
         left: 0;
     }
 
@@ -472,7 +472,7 @@
     }
 
     .counter-one__left {
-        border-bottom-left-radius: 0;
+        display: none;
     }
 
     .blog-page .blog-one__content {
@@ -623,9 +623,7 @@
     }
 
     .why-choose-one__img {
-        position: relative;
-        top: 90px;
-        left: 0;
+        display: none;
     }
 
     .why-choose-one__right {
@@ -803,6 +801,8 @@
     .appointment__left {
         margin-left: 0;
         margin-right: 0;
+        padding-top: 50px;
+        padding-bottom: 0px;
     }
 
     .appointment__left:before {
@@ -1082,6 +1082,10 @@
         border-bottom-right-radius: 10px;
         border-bottom-left-radius: 10px;
     }
+
+    .appointment-shape-1 {
+        display: none;
+      }
 
 
 
@@ -1429,7 +1433,14 @@
         color: var(--roofsie-base);
     }
 
+    .counter-one__right {
+        border-radius: 10px;
+        
+    }
 
+    .counter-one__left {
+        display: none;
+    }
 
 
 
@@ -1451,6 +1462,7 @@
 
     .main-header__logo {
         left: 30px;
+        top: -40px;
     }
 
     .main-menu__wrapper-inner {
@@ -1519,8 +1531,14 @@
     }
 
 
-
-
+    .counter-one__right {
+        border-radius: 10px;
+        
+    }
+    
+    .counter-one__left {
+        display: none;
+    }
 
 
 
@@ -1548,6 +1566,7 @@
 
     .main-header__logo {
         left: 30px;
+        top: -40px;
     }
 
     .main-menu__wrapper-inner {
