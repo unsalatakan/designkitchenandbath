@@ -479,9 +479,11 @@ ul {
 
 .main-header__logo {
   position: absolute;
-  top: 0;
+  top: -10px;
   left: 60px;
   z-index: 9999999999;
+  width: 175px;
+  
 }
 
 .main-header__top {
@@ -3311,7 +3313,7 @@ ul {
 }
 
 .about-one__satisfied-shape img {
-  width: auto;
+  max-width: 400px !important;
 }
 
 .about-one__satisfied-content {
@@ -3782,13 +3784,13 @@ ul {
 
 .why-choose-one__img {
   position: absolute;
-  top: -290px;
-  margin-left: -100px;
+  top: -290px !important;
+  margin-left: -100px !important;
   z-index: 2;
 }
 
 .why-choose-one__img img {
-  width: 180%;
+  width: 180% !important;
 }
 
 .why-choose-one__shape-1 {
@@ -5966,6 +5968,10 @@ ul {
   margin: 0 auto 60px;
   border: 1px solid #ede8e4;
   border-radius: var(--roofsie-bdr-radius);
+}
+
+.max-width-filter {
+  max-width: 938px !important;
 }
 
 .project-filter.style1 li {
@@ -8288,7 +8294,7 @@ ul {
   max-width: 890px;
   width: 100%;
   background-color: var(--roofsie-base-second);
-  padding: 33px 50px 45px;
+  padding: 33px 50px 41px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -11112,7 +11118,7 @@ body.boxed-wrapper {
 
 figure {
   position: absolute;
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/photoshop-face-before.jpg);
+  background-image: url(../images/resources/after.jpeg);
   background-size: cover;
   font-size: 0;
   width: 100%;
@@ -11121,7 +11127,7 @@ figure {
 }
 
 #divisor {
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/photoshop-face-after.jpg);
+  background-image: url(../images/resources/before.jpg);
   background-size: cover;
   position: absolute;
   width: 50%;
@@ -11260,4 +11266,83 @@ input[type=range]::-moz-range-track {
   opacity: 0;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
   transition: 0.3s;
+}
+
+select {
+  /* Personalize */
+  cursor: pointer;
+  height: 60px;
+  width: 100%;
+  background-color: #26252a;
+  border: none;
+  outline: none;
+  padding-left: 30px;
+  padding-right: 55px;
+  color: #86838c;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: var(--roofsie-bdr-radius);
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select wrapper */
+.select {
+  position: relative;
+  display: flex;
+  border-radius: var(--roofsie-bdr-radius);
+  overflow: hidden;
+}
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  color: #ffffff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  padding-left: 1.3em;
+  padding-right: 1.3em;
+  background-color: rgba(var(--roofsie-base-rgb), 1);
+  transition: .25s all ease;
+  pointer-events: none;
+}
+/* Transition */
+.select:hover::after {
+  color: var(--roofsie-base-second);
+}
+
+.mini-logo-height {
+  height: 35px !important;
+}
+
+.blog-image-size {
+  height: 190px !important;
+  object-fit: cover;
+ object-position: 25% 25%; 
+}
+
+#chat-bubble {
+  position: fixed;
+  bottom: 80px; /* Adjust the distance from the bottom as needed */
+  right: 30px; /* Adjust the distance from the right as needed */
+  color: #afafaf;
+  border-radius: 20px 20px 0px 20px ;
+  padding: 10px;
+  z-index: 1000; /* Ensure it's on top of everything */
+  background-color: rgba(var(--roofsie-white-rgb), .60);
+  border-width: 1px;
+  width: 230px;
+  height: 40px;
+}
+
+#chat-message {
+  padding: 5px;
+  position: fixed;
+  bottom: 84px; /* Adjust the distance from the bottom as needed */
+  right: 44px; /* Adjust the distance from the right as needed */
+  z-index: 10000; /* Ensure it's on top of everything */
+  font-size: 15px;
+  color: rgba(var(--roofsie-base-second), .90);
 }

@@ -44,6 +44,33 @@
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/roofsie.css" />
     <link rel="stylesheet" href="assets/css/roofsie-responsive.css" />
+
+    <style>
+        /* Style for the chat widget container */
+        #chat-bubble-container {
+            position: fixed; /* This makes it stay in a fixed position on the screen */
+            right: 20px; /* Adjust this to position it as you desire */
+            bottom: 20px; /* Adjust this to position it as you desire */
+            z-index: 999999999999999; /* This sets the z-index to a high value to ensure it appears on top of everything */
+        }
+    </style>
+    
+    <script src="assets/js/chat.js"></script>
+    <div id="chat-widget-container">
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var chatConfig = {
+                    token: "dGwp03Z2pwJ1PL1PCwTV",
+                };
+                initializeChatWidget(chatConfig);
+            });
+        </script>
+    </div>
+
+    <!-- Buildertrend Contact Form -->
+	<script type="text/javascript" src="https://buildertrend.net/leads/contactforms/js/btClientContactForm.js"></script>
+	
+<!-- /Buildertrend Contact Form -->
 </head>
 
 <body class="custom-cursor">
@@ -55,11 +82,16 @@
     </div>
     <!-- /.preloader -->
 
+    <div id="chat-bubble">
+    </div>
+    <div id="chat-message">How can I assist you today?</div>
+  
+
 
     <div class="page-wrapper">
         <header class="main-header clearfix">
             <div class="main-header__logo">
-                <a href="index.html"><img src="assets/images/resources/logo-1.png" alt="" width="175" ></a>
+                <a href="index.html"><img src="assets/images/resources/logo-1.png" alt="" ></a>
             </div>
             <div class="main-header__top">
                 <div class="main-header__top-inner">
@@ -196,7 +228,7 @@
                                     </div>
                                     <div class="content">
                                         <p>Send Email</p>
-                                        <h5><a href="sales@designkitchenandbath.com">sales@designkitchenandbath.com</a></h5>
+                                        <h5><a href="mailto:sales@designkitchenandbath.com">sales@designkitchenandbath.com</a></h5>
                                     </div>
                                 </li>
                                 <li>
@@ -246,7 +278,7 @@
 
                     <div class="swiper-slide">
                         <div class="image-layer-three"
-                            style="background-image: url(assets/images/backgrounds/main-slider-1-1.jpg);"></div>
+                            style="background-image: url(assets/images/backgrounds/main-slider-1-3.jpg);"></div>
                         <!-- /.image-layer -->
 
                         <div class="container">
@@ -266,7 +298,7 @@
 
                     <div class="swiper-slide">
                         <div class="image-layer-three"
-                            style="background-image: url(assets/images/backgrounds/main-slider-1-1.jpg);"></div>
+                            style="background-image: url(assets/images/backgrounds/main-slider-1-2.jpg);"></div>
                         <!-- /.image-layer -->
 
                         <div class="container">
@@ -274,7 +306,7 @@
                                 <div class="col-xl-12">
                                     <div class="main-slider__content">
                                         <h2 class="main-slider-three__title">Unlock a world of possibilities <br> for your living space</h2>
-                                        <p class="main-slider-three__text">We provide a variety of remodeling and design services for <br> all type of house makes happy.</p>
+                                        <p class="main-slider-three__text">We provide free Estimates & 3D designs<br>&nbsp;</p>
                                         <div class="main-slider-three__btn-box">
                                             <a href="about.html" class="thm-btn main-slider-three__btn"> <i class="fa fa-arrow-right"></i> Contact Us</a>
                                         </div>
@@ -294,7 +326,7 @@
                                 <div class="col-xl-12">
                                     <div class="main-slider__content">
                                         <h2 class="main-slider-three__title">Elevate your living experience <br> with our expert touch</h2>
-                                        <p class="main-slider-three__text">We provide a variety of remodeling and design services for <br> all type of house makes happy.</p>
+                                        <p class="main-slider-three__text">&nbsp;<br>&nbsp;</p>
                                         <div class="main-slider-three__btn-box">
                                             <a href="about.html" class="thm-btn main-slider-three__btn"> <i class="fa fa-arrow-right"></i> Contact Us</a>
                                         </div>
@@ -416,7 +448,7 @@
                                             <div id="handle"></div>
                                             <div id="divisor"></div>
                                           </figure>
-                                          <input type="range" min="0" max="100" value="50" id="slider" oninput="moveDivisor()">
+                                          <input type="range" min="0" max="100" value="70" id="slider" oninput="moveDivisor()">
                                         </div>
                                        </div>
                                 </div>
@@ -447,7 +479,7 @@
                                 <div class="section-sub-title-box">
                                     <p class="section-sub-title">About Design Kitchen & Bath</p>
                                     <div class="section-title-shape-1">
-                                        <img src="assets/images/shapes/logo-small-rgb.png" alt="" height="35px">
+                                        <img src="assets/images/shapes/logo-small-rgb.png" alt="" class="mini-logo-height">
                                     </div>
                                 </div>
                                 <h2 class="section-title__title">Experienced & Quality Remodeling</h2>
@@ -508,7 +540,7 @@
                                     <div class="section-sub-title-box">
                                         <p class="section-sub-title">Our services</p>
                                         <div class="section-title-shape-1">
-                                            <img src="assets/images/shapes/section-title-shape-1.png" alt="" height="35px">
+                                            <img src="assets/images/shapes/section-title-shape-1.png" alt="" class="mini-logo-height">
                                         </div>
                                     </div>
                                     <h2 class="section-title__title">Unleash Your Home's Potential with Our Remodeling Expertise</h2>
@@ -535,7 +567,7 @@
                                         <img src="assets/images/resources/sinkpng.png" alt="" width="64px" height="64px">
                                     </div>
                                     <h3 class="services-one__title"><a href="single-play-roofing.html">Kitchen Remodeling</a></h3>
-                                    <p class="services-one__text">Revamps culinary spaces for improved functionality and design.</p>
+                                    <p class="services-one__text">Transform your kitchen into a culinary masterpiece with our expert remodeling services.</p>
                                     <div class="services-one__read-more">
                                         <a href="single-play-roofing.html">Read More <i class="fa fa-arrow-right"></i></a>
                                     </div>
@@ -554,7 +586,7 @@
                                         <img src="assets/images/resources/bathroompng.png" alt="" width="50px" height="50px">
                                     </div>
                                     <h3 class="services-one__title"><a href="modified-roofing.html">Bathroom Remodeling</a></h3>
-                                    <p class="services-one__text">Nulla commodo dolor massa, vel pellen esque nulla congue quis.</p>
+                                    <p class="services-one__text">Elevate your daily routine with our stunning bathroom remodeling solutions.<br>&nbsp;</p>
                                     <div class="services-one__read-more">
                                         <a href="modified-roofing.html">Read More <i class="fa fa-arrow-right"></i></a>
                                     </div>
@@ -573,7 +605,7 @@
                                         <img src="assets/images/resources/basement.png" alt="" width="50px" height="50px">
                                     </div>
                                     <h3 class="services-one__title"><a href="built-up-roofing.html">Basement Remodeling</a></h3>
-                                    <p class="services-one__text">Nulla commodo dolor massa, vel pellen esque nulla congue quis.</p>
+                                    <p class="services-one__text">Unlock the potential of your basement with our exceptional remodeling expertise.</p>
                                     <div class="services-one__read-more">
                                         <a href="built-up-roofing.html">Read More <i class="fa fa-arrow-right"></i></a>
                                     </div>
@@ -585,14 +617,14 @@
                         <div class="col-xl-3 col-lg-3 wow fadeInUp" data-wow-delay="300ms">
                             <div class="services-one__single">
                                 <div class="services-one__img">
-                                    <img src="assets/images/services/services-1-3.jpg" alt="">
+                                    <img src="assets/images/services/services-1-4.jpg" alt="">
                                 </div>
                                 <div class="services-one__content">
                                     <div class="services-one__icon">
                                         <span class="icon-roof-1"></span>
                                     </div>
                                     <h3 class="services-one__title"><a href="built-up-roofing.html">Home <br> Additions</a></h3>
-                                    <p class="services-one__text">Nulla commodo dolor massa, vel pellen esque nulla congue quis.</p>
+                                    <p class="services-one__text">Expand your living space and possibilities with our seamless home additions. <br>&nbsp;</p>
                                     <div class="services-one__read-more">
                                         <a href="built-up-roofing.html">Read More <i class="fa fa-arrow-right"></i></a>
                                     </div>
@@ -623,7 +655,7 @@
                                 <div class="section-sub-title-box">
                                     <p class="section-sub-title">Why choose us</p>
                                     <div class="section-title-shape-1">
-                                        <img src="assets/images/shapes/logo-small-rgb.png" alt="" height="35px">
+                                        <img src="assets/images/shapes/logo-small-rgb.png" alt="" class="mini-logo-height">
                                     </div>
                                 </div>
                                 <h2 class="section-title__title">Few reasons to choose our company</h2>
@@ -679,7 +711,7 @@
                         <div class="why-choose-one__right">
                             <div class="why-choose-one__img-box">
                                 <div class="why-choose-one__img wow slideInRight" data-wow-delay="100ms" data-wow-duration="2500ms">
-                                    <img src="assets/images/resources/why-choose-one-img-1.png" alt="">
+                                    <img src="assets/images/resources/why-choose-one-img-1.png" alt="" style="max-width: 1098px !important; height: 1098px !important;">
                                 </div>
                                 <div class="why-choose-one__shape-1"></div>
                                 <div class="why-choose-one__shape-2"></div>
@@ -867,7 +899,7 @@
                             <p class="counter-one__sub-title">Numbers game</p>
                             <h3 class="counter-one__title">Interesting fun facts</h3>
                             <div class="counter-one__left-icon">
-                                <img src="assets/images/shapes/section-title-shape-1.png" alt="" height="27px">
+                                <img src="assets/images/shapes/section-title-shape-1.png" alt="" style="height: 27px !important;">
                             </div>
                         </div>
                     </div>
@@ -924,7 +956,7 @@
                     <div class="section-sub-title-box">
                         <p class="section-sub-title">Latest Projects</p>
                         <div class="section-title-shape-1">
-                            <img src="assets/images/shapes/logo-small-rgb.png" alt="" height="35px">
+                            <img src="assets/images/shapes/logo-small-rgb.png" alt="" class="mini-logo-height">
                         </div>
                     </div>
                     <h2 class="section-title__title">Explore our latest projects <br> for your inspiration</h2>
@@ -1094,7 +1126,7 @@
             <div class="trust-company-shape-2"></div>
             <div class="trust-company-shape-3"></div>
             <div class="trust-company-shape-4"></div>
-            <div class="trust-company-bg jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%" style="background-image: url(assets/images/backgrounds/trust-company-bg.jpg);"></div>
+            <div class="trust-company-bg jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%" style="background-image: url(assets/images/backgrounds/main-slider-1-1.jpg);"></div>
             <div class="container">
                 <div class="row">
                     <div class="col-xl-6 col-lg-7">
@@ -1153,7 +1185,7 @@
                     <div class="section-sub-title-box">
                         <p class="section-sub-title">testimonials</p>
                         <div class="section-title-shape-1">
-                            <img src="assets/images/shapes/logo-small-rgb.png" alt="" height="35px">
+                            <img src="assets/images/shapes/logo-small-rgb.png" alt="" class="mini-logo-height">
                         </div>
                     </div>
                     <h2 class="section-title__title">What they’re talking <br> about us</h2>
@@ -1188,7 +1220,7 @@
                             <div class="testimonial-one__client-info">
                                 <div class="testimonial-one__client-img-box">
                                     <div class="testimonial-one__client-img">
-                                        <img src="assets/images/testimonial/testimonial-1-1.jpg" alt="">
+                                        <img src="assets/images/testimonial/testimonial-1-1.jpg" alt="" width="85px" height="85px">
                                     </div>
                                 </div>
                                 <div class="testimonial-one__client-details">
@@ -1213,7 +1245,7 @@
                             <div class="testimonial-one__client-info">
                                 <div class="testimonial-one__client-img-box">
                                     <div class="testimonial-one__client-img">
-                                        <img src="assets/images/testimonial/testimonial-1-2.jpg" alt="">
+                                        <img src="assets/images/testimonial/testimonial-1-2.jpg" alt="" width="85px" height="85px">
                                     </div>
                                 </div>
                                 <div class="testimonial-one__client-details">
@@ -1238,7 +1270,7 @@
                             <div class="testimonial-one__client-info">
                                 <div class="testimonial-one__client-img-box">
                                     <div class="testimonial-one__client-img">
-                                        <img src="assets/images/testimonial/testimonial-1-3.jpg" alt="">
+                                        <img src="assets/images/testimonial/testimonial-1-3.jpg" alt="" width="85px" height="85px">
                                     </div>
                                 </div>
                                 <div class="testimonial-one__client-details">
@@ -1263,7 +1295,7 @@
                             <div class="testimonial-one__client-info">
                                 <div class="testimonial-one__client-img-box">
                                     <div class="testimonial-one__client-img">
-                                        <img src="assets/images/testimonial/testimonial-1-4.jpg" alt="">
+                                        <img src="assets/images/testimonial/testimonial-1-4.jpg" alt="" width="85px" height="85px">
                                     </div>
                                 </div>
                                 <div class="testimonial-one__client-details">
@@ -1296,7 +1328,7 @@
                     <div class="section-sub-title-box">
                         <p class="section-sub-title">News & Updates</p>
                         <div class="section-title-shape-1">
-                            <img src="assets/images/shapes/logo-small-rgb.png" alt="" height="35px">
+                            <img src="assets/images/shapes/logo-small-rgb.png" alt="" class="mini-logo-height">
                         </div>
                     </div>
                     <h2 class="section-title__title">Stay update with us <br> news & articles</h2>
@@ -1306,7 +1338,7 @@
                     <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
                         <div class="blog-one__single">
                             <div class="blog-one__img">
-                                <img src="assets/images/blog/blog-1-1.jpg" alt="">
+                                <img src="assets/images/blog/blog-1-1.jpg" alt="" class="blog-image-size">
                             </div>
                             <div class="blog-one__content">
                                 <div class="blog-one__user">
@@ -1331,7 +1363,7 @@
                     <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="200ms">
                         <div class="blog-one__single">
                             <div class="blog-one__img">
-                                <img src="assets/images/blog/blog-1-2.jpg" alt="">
+                                <img src="assets/images/blog/blog-1-2.jpg" alt="" class="blog-image-size"">
                             </div>
                             <div class="blog-one__content">
                                 <div class="blog-one__user">
@@ -1356,7 +1388,7 @@
                     <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms">
                         <div class="blog-one__single">
                             <div class="blog-one__img">
-                                <img src="assets/images/blog/blog-1-3.jpg" alt="">
+                                <img src="assets/images/blog/blog-1-3.jpg" alt="" class="blog-image-size">
                             </div>
                             <div class="blog-one__content">
                                 <div class="blog-one__user">
@@ -1368,7 +1400,7 @@
                                         <h5>July 17, 2023</h5>
                                     </div>
                                 </div>
-                                <h3 class="blog-one__title"><a href="blog-details.html">Avoid these typical errors when designing a basement</a></h3>
+                                <h3 class="blog-one__title"><a href="blog-details.html">Avoid these typical mistakes when designing a basement</a></h3>
                                 <p class="blog-one__text">Designing a basement can be an exciting project, but there are several pitfalls to watch out for to ensure you create a functional and inviting space.</p>
                                 <div class="blog-one__read-more">
                                     <a href="blog-details.html">Read More <i class="fa fa-arrow-right"></i></a>
@@ -1382,8 +1414,9 @@
         </section>
         <!--Blog One End-->
 
-        <!--Appointment Start-->
+        <!--Appointment Start
         <section class="appointment">
+            
             <div class="container">
                 <div class="row">
                     <div class="col-xl-3 col-lg-4">
@@ -1431,7 +1464,20 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                    <div class="col-xl-6 col-lg-6 col-md-6">
+                                        <div>
+                                            <div class="select">
+                                                <select>
+                                                  <option value="" disabled selected>How did you hear about us?</option>
+                                                  <option value="Social_Media">Social Media</option>
+                                                  <option value="Online_Search">Online Search</option>
+                                                  <option value="Friends_Advice">Friend's Advice</option>
+                                                  <option value="Contractor_Recommendation">Contractor Recommendation</option>
+                                                </select>
+                                              </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6">
                                         <div class="appointment__input-box">
                                             <button type="submit" class="thm-btn appointment__btn"><i class="fa fa-arrow-right"></i>Send a request</button>
                                         </div>
@@ -1442,7 +1488,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>-->
         <!--Appointment End-->
 
 
@@ -1460,7 +1506,7 @@
                         <h3 class="cta-one__title">Need remodeling services?</h3>
                     </div>
                     <div class="cta-one__btn-box">
-                        <a href="contact.html" class="thm-btn cta-one__btn"> <i class="fa fa-arrow-right"></i> get free estimate</a>
+                        <a href="contact.html" class="thm-btn cta-one__btn"> <i class="fa fa-arrow-right"></i> Book a Appointment</a>
                     </div>
                 </div>
             </div>
@@ -1610,7 +1656,6 @@
     </div>
     <!-- /.search-popup -->
 
-    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
 
 
     <script src="assets/vendors/jquery/jquery-3.6.0.min.js"></script>
