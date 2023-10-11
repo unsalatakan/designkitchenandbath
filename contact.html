@@ -45,6 +45,8 @@
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/roofsie.css" />
     <link rel="stylesheet" href="assets/css/roofsie-responsive.css" />
+
+    
 </head>
 
 <body class="custom-cursor">
@@ -234,7 +236,7 @@
 
         <!--Page Header Start-->
         <section class="page-header">
-            <div class="page-header-bg" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg)">
+            <div class="page-header-bg" style="background-image: url(assets/images/backgrounds/page-header-bg-contact.jpg)">
             </div>
             <div class="container">
                 <div class="page-header__inner">
@@ -249,118 +251,74 @@
         </section>
         <!--Page Header End-->
 
-        <!--Contact Details Start-->
-        <section class="contact-details">
-            <div class="container">
-                <ul class="list-unstyled contact-details__list">
-                    <li>
-                        <div class="contact-details__icon">
-                            <span class="icon-telephone"></span>
-                        </div>
-                        <div class="contact-details__content">
-                            <h4>
-                                <a href="tel:14438246755" class="contact-details__number-1">443-824-6755</a>
-                            </h4>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="contact-details__icon">
-                            <span class="icon-email"></span>
-                        </div>
-                        <div class="contact-details__content">
-                            <h4>
-                                <a href="mailto:sales@designkitchenandbath.com" class="contact-details__number-1">sales@designkitchenandbath.com</a>
-                            </h4>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="contact-details__icon">
-                            <span class="icon-pin"></span>
-                        </div>
-                        <div class="contact-details__content">
-                            <h4>8450 Baltimore National Pike Suite 150<br> Ellicott City, Maryland</h4>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <!--Contact Details End-->
+        <!-- Buildertrend Contact Form -->
 
-        <!--Appointment Start-->
-        <section class="appointment">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-3 col-lg-4">
-                        <div class="appointment__left">
-                            <div class="appointment-shape-1" style="background-image: url(assets/images/shapes/appointment-shape-1.png);"></div>
-                            <div class="appointment__left-content">
-                                <h3 class="appointment__title">Book your appointment</h3>
-                                <p class="appointment__text"><br><br></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-9 col-lg-8">
-                        <div class="appointment__right">
-                            <form action="assets/inc/sendemail.php" class="appointment__form contact-form-validated" novalidate="novalidate">
-                                <div class="row">
-                                    <div class="col-xl-6 col-lg-6 col-md-6">
-                                        <div class="appointment__input-box">
-                                            <input type="text" placeholder="Name" name="name">
-                                            <div class="appointment__input-icon">
-                                                <i class="far fa-user"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-6 col-lg-6 col-md-6">
-                                        <div class="appointment__input-box">
-                                            <input type="text" placeholder="Phone" name="Phone">
-                                            <div class="appointment__input-icon">
-                                                <i class="fas fa-phone"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-6 col-lg-6 col-md-6">
-                                        <div class="appointment__input-box">
-                                            <input type="text" placeholder="Select Date" name="date" id="datepicker">
-                                            <div class="appointment__input-icon">
-                                                <i class="far fa-calendar"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-6 col-lg-6 col-md-6">
-                                        <div class="appointment__input-box">
-                                            <input type="text" name="time" placeholder="Choose Time">
-                                            <div class="appointment__input-icon">
-                                                <i class="far fa-clock"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-6 col-lg-6 col-md-6">
-                                        <div>
-                                            <div class="select">
-                                                <select>
-                                                  <option value="" disabled selected>How did you hear about us?</option>
-                                                  <option value="Social_Media">Social Media</option>
-                                                  <option value="Online_Search">Online Search</option>
-                                                  <option value="Friends_Advice">Friend's Advice</option>
-                                                  <option value="Contractor_Recommendation">Contractor Recommendation</option>
-                                                </select>
-                                              </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-6 col-lg-6 col-md-6">
-                                        <div class="appointment__input-box">
-                                            <button type="submit" class="thm-btn appointment__btn"><i class="fa fa-arrow-right"></i>Send a request</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
+        <div class="container pt-5 pb-5">
+
+            <div class="section-title text-center">
+                <div class="section-sub-title-box">
+                    <p class="section-sub-title">Contact Us</p>
+                    <div class="section-title-shape-1">
+                        <img src="assets/images/shapes/logo-small-rgb.png" alt="" class="mini-logo-height">
                     </div>
                 </div>
+                <h2 class="section-title__title">You can submit contact form or <br> you can call us, email us or you can visit our showroom!</h2>
             </div>
-        </section>
-        <!--Appointment End-->
+
+            <div class="row pt-5">
+                <div class="col-xl-6 col-lg-4">
+                    <script type="text/javascript" src="https://buildertrend.net/leads/contactforms/js/btClientContactForm.js"></script>
+                    <div id="btIframeContainer">
+                        <iframe src="https://buildertrend.net/leads/contactforms/ContactFormFrame.aspx?builderID=98031" scrolling="no" id="btIframe"></iframe>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-8">
+                    <section class="contact-details">
+                        <div class="container">
+                            <div class="contact-details__item">
+                                <div class="contact-details__icon">
+                                    <span class="icon-telephone"></span>
+                                </div>
+                                <div class="contact-details__content">
+                                    <h4>
+                                        <a href="tel:14438246755" class="contact-details__number-1">443-824-6755</a>
+                                    </h4>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="contact-details__item">
+                                <div class="contact-details__icon">
+                                    <span class="icon-email"></span>
+                                </div>
+                                <div class="contact-details__content">
+                                    <h4>
+                                        <a href="mailto:sales@designkitchenandbath.com" class="contact-details__number-1">sales@designkitchenandbath.com</a>
+                                    </h4>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="contact-details__item">
+                                <div class="contact-details__icon">
+                                    <span class="icon-pin"></span>
+                                </div>
+                                <div class="contact-details__content">
+                                    <h4>8450 Baltimore National Pike Suite 150<br> Ellicott City, Maryland</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                </div>
+            </div>
+        </div>
+
+
+	
+        <!-- /Buildertrend Contact Form -->
+
+        
+
+        
 
         <!--Google Map Start-->
         <section class="google-map google-map-two">

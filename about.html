@@ -233,7 +233,7 @@
 
         <!--Page Header Start-->
         <section class="page-header">
-            <div class="page-header-bg" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg)">
+            <div class="page-header-bg" style="background-image: url(assets/images/backgrounds/page-header-bg-contact.jpg)">
             </div>
             <div class="container">
                 <div class="page-header__inner">
@@ -712,21 +712,32 @@
         </section>
         <!--Trust Company End-->
 
-        <!--Team One Start-->
-        <section class="team-one team-two">
+        <!--Team Page Start-->
+        <section class="team-carousel-page">
             <div class="container">
-                <div class="section-title text-center">
-                    <div class="section-sub-title-box">
-                        <p class="section-sub-title">Our team members</p>
-                        <div class="section-title-shape-1">
-                            <img src="assets/images/shapes/logo-small-rgb.png" alt="" height="35px">
-                        </div>
-                    </div>
-                    <h2 class="section-title__title">Meet our experienced team members</h2>
-                </div>
-                <div class="row">
+                <div class="team-carousel thm-owl__carousel owl-theme owl-carousel carousel-dot-style" data-owl-options='{
+                    "items": 3,
+                    "margin": 30,
+                    "smartSpeed": 700,
+                    "loop":true,
+                    "autoplay": 6000,
+                    "nav":false,
+                    "dots":true,
+                    "navText": ["<span class=\"fa fa-angle-left\"></span>","<span class=\"fa fa-angle-right\"></span>"],
+                    "responsive":{
+                        "0":{
+                            "items":1
+                        },
+                        "768":{
+                            "items":2
+                        },
+                        "992":{
+                            "items": 3
+                        }
+                    }
+                }'>
                     <!--Team One Single Start-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
+                    <div class="item">
                         <div class="team-one__single">
                             <div class="team-one__img-box">
                                 <div class="team-one__img">
@@ -735,8 +746,9 @@
                             </div>
                             <div class="team-one__content-box">
                                 <div class="team-one__content">
-                                    <h3 class="team-one__name"><a href="team-details.html">Christian Bale</a></h3>
-                                    <p class="team-one__sub-title">Executive</p>
+                                    <h3 class="team-one__name"><a href="team-details.html">James Doganci</a></h3>
+                                    <p class="team-one__sub-title">Owner & Designer</p>
+                                    
                                     <div class="team-one__shape">
                                         <img src="assets/images/shapes/logo-small-rgb.png" alt="">
                                     </div>
@@ -746,17 +758,18 @@
                     </div>
                     <!--Team One Single End-->
                     <!--Team One Single Start-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="200ms">
+                    <div class="item">
                         <div class="team-one__single">
                             <div class="team-one__img-box">
                                 <div class="team-one__img">
-                                    <img src="assets/images/team/team-1-2.jpg" alt="">
+                                    <img src="assets/images/team/team-1-1.jpg" alt="">
                                 </div>
                             </div>
                             <div class="team-one__content-box">
                                 <div class="team-one__content">
-                                    <h3 class="team-one__name"><a href="team-details.html">Sarah Albert</a></h3>
+                                    <h3 class="team-one__name"><a href="team-details.html">Angela Doganci</a></h3>
                                     <p class="team-one__sub-title">Manager</p>
+                                    
                                     <div class="team-one__shape">
                                         <img src="assets/images/shapes/logo-small-rgb.png" alt="">
                                     </div>
@@ -766,17 +779,165 @@
                     </div>
                     <!--Team One Single End-->
                     <!--Team One Single Start-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms">
+                    <div class="item">
                         <div class="team-one__single">
                             <div class="team-one__img-box">
                                 <div class="team-one__img">
-                                    <img src="assets/images/team/team-1-3.jpg" alt="">
+                                    <img src="assets/images/team/team-1-1.jpg" alt="">
                                 </div>
                             </div>
                             <div class="team-one__content-box">
                                 <div class="team-one__content">
-                                    <h3 class="team-one__name"><a href="team-details.html">Mike Hardson</a></h3>
-                                    <p class="team-one__sub-title">Director</p>
+                                    <h3 class="team-one__name"><a href="team-details.html">Allison</a></h3>
+                                    <p class="team-one__sub-title">Office Manager</p>
+                                    
+                                    <div class="team-one__shape">
+                                        <img src="assets/images/shapes/logo-small-rgb.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Team One Single End-->
+                    <!--Team One Single Start-->
+                    <div class="item">
+                        <div class="team-one__single">
+                            <div class="team-one__img-box">
+                                <div class="team-one__img">
+                                    <img src="assets/images/team/team-1-1.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="team-one__content-box">
+                                <div class="team-one__content">
+                                    <h3 class="team-one__name"><a href="team-details.html">Junior</a></h3>
+                                    <p class="team-one__sub-title">Sales Person & Designer</p>
+                                    
+                                    <div class="team-one__shape">
+                                        <img src="assets/images/shapes/logo-small-rgb.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Team One Single End-->
+                    <!--Team One Single Start-->
+                    <div class="item">
+                        <div class="team-one__single">
+                            <div class="team-one__img-box">
+                                <div class="team-one__img">
+                                    <img src="assets/images/team/team-1-1.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="team-one__content-box">
+                                <div class="team-one__content">
+                                    <h3 class="team-one__name"><a href="team-details.html">Daena</a></h3>
+                                    <p class="team-one__sub-title">Sales Person & Designer</p>
+                                    
+                                    <div class="team-one__shape">
+                                        <img src="assets/images/shapes/logo-small-rgb.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Team One Single End-->
+                    <!--Team One Single Start-->
+                    <div class="item">
+                        <div class="team-one__single">
+                            <div class="team-one__img-box">
+                                <div class="team-one__img">
+                                    <img src="assets/images/team/team-1-1.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="team-one__content-box">
+                                <div class="team-one__content">
+                                    <h3 class="team-one__name"><a href="team-details.html">Matt</a></h3>
+                                    <p class="team-one__sub-title">Sales Person & Designer</p>
+                                    
+                                    <div class="team-one__shape">
+                                        <img src="assets/images/shapes/logo-small-rgb.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Team One Single End-->
+                    <!--Team One Single Start-->
+                    <div class="item">
+                        <div class="team-one__single">
+                            <div class="team-one__img-box">
+                                <div class="team-one__img">
+                                    <img src="assets/images/team/team-1-1.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="team-one__content-box">
+                                <div class="team-one__content">
+                                    <h3 class="team-one__name"><a href="team-details.html">Brandon</a></h3>
+                                    <p class="team-one__sub-title">Head of Operations & Project Manager</p>
+                                    
+                                    <div class="team-one__shape">
+                                        <img src="assets/images/shapes/logo-small-rgb.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Team One Single End-->
+                    <!--Team One Single Start-->
+                    <div class="item">
+                        <div class="team-one__single">
+                            <div class="team-one__img-box">
+                                <div class="team-one__img">
+                                    <img src="assets/images/team/team-1-1.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="team-one__content-box">
+                                <div class="team-one__content">
+                                    <h3 class="team-one__name"><a href="team-details.html">Samuel</a></h3>
+                                    <p class="team-one__sub-title">Project Manager</p>
+                                    
+                                    <div class="team-one__shape">
+                                        <img src="assets/images/shapes/logo-small-rgb.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Team One Single End-->
+                    <!--Team One Single Start-->
+                    <div class="item">
+                        <div class="team-one__single">
+                            <div class="team-one__img-box">
+                                <div class="team-one__img">
+                                    <img src="assets/images/team/team-1-1.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="team-one__content-box">
+                                <div class="team-one__content">
+                                    <h3 class="team-one__name"><a href="team-details.html">Bryan</a></h3>
+                                    <p class="team-one__sub-title">Project Manager</p>
+                                    
+                                    <div class="team-one__shape">
+                                        <img src="assets/images/shapes/logo-small-rgb.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Team One Single End-->
+                    <!--Team One Single Start-->
+                    <div class="item">
+                        <div class="team-one__single">
+                            <div class="team-one__img-box">
+                                <div class="team-one__img">
+                                    <img src="assets/images/team/team-1-1.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="team-one__content-box">
+                                <div class="team-one__content">
+                                    <h3 class="team-one__name"><a href="team-details.html">Atakan Unsal</a></h3>
+                                    <p class="team-one__sub-title">Social Media Manager</p>
+                                    
                                     <div class="team-one__shape">
                                         <img src="assets/images/shapes/logo-small-rgb.png" alt="">
                                     </div>
@@ -788,7 +949,7 @@
                 </div>
             </div>
         </section>
-        <!--Team One End-->
+        <!--Team Page End-->
 
         <!--CTA One Start-->
         <section class="cta-one cta-two">
