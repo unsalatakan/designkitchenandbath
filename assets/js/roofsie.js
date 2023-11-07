@@ -944,3 +944,38 @@ window.onload = function() {
   moveDivisor();
 };
 
+// Function to show the pop-up after 3 seconds
+function showPopup() {
+  var popup = document.getElementById("myPopup");
+  setTimeout(function() {
+      popup.style.display = "block";
+  }, 3000); // 3 seconds
+}
+
+function showPopup() {
+  var popup = document.getElementById("myPopup");
+            setTimeout(function() {
+                popup.style.display = "block";
+                setTimeout(function() {
+                    popup.style.opacity = 1; // Fade in the pop-up
+                }, 10); // A small delay for smoother transition
+            }, 3000); // 3 seconds
+}
+
+// Function to close the pop-up after 10 seconds
+function closePopup() {
+  var popup = document.getElementById("myPopup");
+  setTimeout(function() {
+      popup.style.opacity = 0; // Fade out the pop-up
+      setTimeout(function() {
+          popup.style.display = "none";
+      }, 500); // After 0.5 seconds
+  }, 10000); // 10 seconds
+}
+
+// Call the functions when the page loads
+window.onload = function() {
+  showPopup();
+  closePopup();
+}
+
