@@ -945,37 +945,42 @@ window.onload = function() {
 };
 
 // Function to show the pop-up after 3 seconds
-function showPopup() {
-  var popup = document.getElementById("myPopup");
-  setTimeout(function() {
-      popup.style.display = "block";
-  }, 3000); // 3 seconds
-}
 
-function showPopup() {
   var popup = document.getElementById("myPopup");
-            setTimeout(function() {
-                popup.style.display = "block";
-                setTimeout(function() {
-                    popup.style.opacity = 1; // Fade in the pop-up
-                }, 10); // A small delay for smoother transition
-            }, 3000); // 3 seconds
-}
 
-// Function to close the pop-up after 10 seconds
-function closePopup() {
-  var popup = document.getElementById("myPopup");
-  setTimeout(function() {
+  // Function to show the pop-up after 3 seconds with a fade-in effect
+  function showPopup() {
+      setTimeout(function() {
+          popup.style.display = "block";
+          setTimeout(function() {
+              popup.style.opacity = 1; // Fade in the pop-up
+          }, 10); // A small delay for smoother transition
+      }, 3000); // 3 seconds
+
+      // Add an event listener to close the pop-up when clicking outside of it
+      popup.addEventListener("click", function(event) {
+          if (event.target === popup) {
+              closePopup();
+          }
+      });
+
+      // Automatically close the pop-up after 10 seconds
+      setTimeout(function() {
+          closePopup();
+      }, 20000); // 10 seconds
+  }
+
+  // Function to close the pop-up
+  function closePopup() {
       popup.style.opacity = 0; // Fade out the pop-up
       setTimeout(function() {
           popup.style.display = "none";
       }, 500); // After 0.5 seconds
-  }, 10000); // 10 seconds
-}
+  }
 
-// Call the functions when the page loads
-window.onload = function() {
-  showPopup();
-  closePopup();
-}
+  // Call the functions when the page loads
+  window.onload = function() {
+      showPopup();
+  }
 
+ 

@@ -70,15 +70,73 @@
     <!-- Buildertrend Contact Form -->
 	<script type="text/javascript" src="https://buildertrend.net/leads/contactforms/js/btClientContactForm.js"></script>
 	
-<!-- /Buildertrend Contact Form -->
-</head>
+    <!-- /Buildertrend Contact Form -->
+
+    <!-- Google Ad -->
+    <script src="path/to/adLinks.js"></script>
+    <script>
+        // Insert ad links dynamically in the head section
+        document.addEventListener("DOMContentLoaded", function() {
+            var link1 = document.createElement("link");
+            link1.rel = "stylesheet";
+            link1.href = adLink1;
+            link1.type = "text/css";
+            document.head.appendChild(link1);
+
+            var script2 = document.createElement("script");
+            script2.src = adLink2;
+            document.head.appendChild(script2);
+        });
+    </script>
+
+    </head>
 
 <body class="custom-cursor">
 
     <!-- The pop-up div -->
     <div class="popup" id="myPopup">
+        <div id="confetti"></div>
         <div class="popup-content">
-            <p style="text-align:center"><strong><span style="font-size:24px">We are now opening third showroom in Severna Park!</span></strong></p>
+            <div class="container">
+                <div class="row">
+                    <br>
+                    <h3 class="section-title__title">OUR LOCATIONS!</h3>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="col-xl-4">
+                      <p style="font-size: 24px;" class="counter-one__text">#1 ELLICOTT CITY</p>
+                      <p class="counter-one__text">&nbsp;</p>
+                      <img src="assets/images/resources/about-three-img-1.jpg"> 
+                      <br> 
+                      <p >8450 Baltimore National Pike</p>
+                      <p>Suite 150</p>
+                      <p><a href="mailto:sales@designkitchenandbath.com">sales@designkitchenandbath.com</a></p>  
+                      <a href="tel:443-824-6755">443-824-6755</a>
+                    </div>
+                    <div class="col-xl-4">
+                        <p style="font-size: 24px;" class="counter-one__text">#2 CLARKSVILLE</p> 
+                        <p class="counter-one__text"><strong>Just Opened!</strong> </p>
+                        <img src="assets/images/resources/about-three-img-2.jpg" >
+                        <br>
+                        <p>12165 Clarksville Pike</p>
+                        <p>Unit 304</p> 
+                        <p><a href="mailto:sales@dkbclarksville.com">sales@dkbclarksville.com</a></p>  
+                        <a href="tel:443-824-6755">443-542-2018</a>       
+                    </div>
+                    <div class="col-xl-4">
+                        <p style="font-size: 24px;" class="counter-one__text">#3 SEVERNA PARK</p> 
+                        <p class="counter-one__text"><strong>Coming Soon!</strong> </p>
+                        <img src="assets/images/resources/comingsoon.png" style="width: 218px; height: 163px;">
+                        <br> 
+                        <p>574 Governor Ritchie Highway, Unit F</p>        
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <p style="text-align:center" class="counter-one__text"><strong><span style="font-size:24px">We are now opening third showroom in Severna Park!</span></strong></p>
+            <br>
         </div>
     </div>
 
@@ -92,7 +150,7 @@
     <!-- /.preloader -->
 
     <div id="chat-bubble">
-    </div>
+    </div> 
     <div id="chat-message">How can I assist you today?</div>
   
 
@@ -170,19 +228,14 @@
                                             <li><a href="homeadditions.html">Home Additions</a></li>
                                         </ul>
                                     </li>
-                                    <li class="dropdown">
+                                    <li>
                                         <a href="gallery.html">Gallery</a>
-                                        <ul class="border-top-2px">
-                                            <li><a href="gallery.html">All</a></li>
-                                            <li><a href="kitchen-gallery.html">Kitchen</a></li>
-                                            <li><a href="bathroom-gallery.html">Bathroom</a></li>
-                                            <li><a href="basement-gallery.html">Basement</a></li>
-                                            <li><a href="home-addition-gallery.html">Home Addition</a></li>
-                                        </ul>
                                     </li>
+                                    <!-- 
                                     <li class="">
                                         <a href="work.html">Works </a>
                                     </li>
+                                    -->
                                     <li class="dropdown">
                                         <a href="#">Products</a>
                                         <ul class="border-top-2px">
@@ -221,20 +274,11 @@
                             <ul class="list-unstyled main-header-three__address-list">
                                 <li>
                                     <div class="icon">
-                                        <span class="icon-phone-call"></span>
+                                        <span class="icon-location"></span>
                                     </div>
                                     <div class="content">
-                                        <p>Call Anytime</p>
-                                        <h5><a href="tel:14438246755">443-824-6755</a></h5>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="icon">
-                                        <span class="icon-message"></span>
-                                    </div>
-                                    <div class="content">
-                                        <p>Send Email</p>
-                                        <h5><a href="mailto:sales@designkitchenandbath.com">sales@designkitchenandbath.com</a></h5>
+                                        <p>8450 Baltimore National Pike Suite 150</p>
+                                        <h5>Ellicott City, Maryland</h5>
                                     </div>
                                 </li>
                                 <li>
@@ -242,8 +286,17 @@
                                         <span class="icon-location"></span>
                                     </div>
                                     <div class="content">
-                                        <p>8450 Baltimore National Pike Suite 150</p>
-                                        <h5>Ellicott City, Maryland</h5>
+                                        <p>12165 Clarksville Pike Unit 304</p>
+                                        <h5>Clarksville, Maryland</h5>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <span class="icon-location"></span>
+                                    </div>
+                                    <div class="content">
+                                        <p>574 Governor Ritchie Highway Unit F</p>
+                                        <h5>Severna Park, Maryland</h5>
                                     </div>
                                 </li>
                             </ul>
@@ -383,9 +436,6 @@
                                 </div>
                                 <div class="feature-one__single-inner">
                                     <p class="feature-one__text">Building dreams with the foundation of quality materials.</p>
-                                    <div class="feature-one__read-more">
-                                        <a href="about.html">Read More <i class="fa fa-arrow-right"></i></a>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -403,9 +453,6 @@
                                 </div>
                                 <div class="feature-one__single-inner">
                                     <p class="feature-one__text">Professionals that power your business vision to reality.</p>
-                                    <div class="feature-one__read-more">
-                                        <a href="team-details.html">Read More <i class="fa fa-arrow-right"></i></a>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -423,9 +470,6 @@
                                 </div>
                                 <div class="feature-one__single-inner">
                                     <p class="feature-one__text">Elevate your project with our free estimates, turning ideas into reality.</p>
-                                    <div class="feature-one__read-more">
-                                        <a href="contact.html">Read More <i class="fa fa-arrow-right"></i></a>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -454,7 +498,7 @@
                                             <div id="handle"></div>
                                             <div id="divisor"></div>
                                           </figure>
-                                          <input type="range" min="0" max="100" value="30" id="slider" oninput="moveDivisor()">
+                                          <input type="range" min="0" max="100" value="50" id="slider" oninput="moveDivisor()">
                                         </div>
                                        </div>
                                 </div>
@@ -572,10 +616,10 @@
                                     <div class="services-one__icon">
                                         <img src="assets/images/resources/sinkpng.png" alt="" width="64px" height="64px">
                                     </div>
-                                    <h3 class="services-one__title"><a href="single-play-roofing.html">Kitchen Remodeling</a></h3>
+                                    <h3 class="services-one__title"><a href="kitchen.html">Kitchen Remodeling</a></h3>
                                     <p class="services-one__text">Transform your kitchen into a culinary masterpiece with our expert remodeling services.</p>
                                     <div class="services-one__read-more">
-                                        <a href="single-play-roofing.html">Read More <i class="fa fa-arrow-right"></i></a>
+                                        <a href="kitchen.html">Read More <i class="fa fa-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -591,10 +635,10 @@
                                     <div class="services-one__icon">
                                         <img src="assets/images/resources/bathroompng.png" alt="" width="50px" height="50px">
                                     </div>
-                                    <h3 class="services-one__title"><a href="modified-roofing.html">Bathroom Remodeling</a></h3>
+                                    <h3 class="services-one__title"><a href="bathroom.html">Bathroom Remodeling</a></h3>
                                     <p class="services-one__text">Elevate your daily routine with our stunning bathroom remodeling solutions.<br>&nbsp;</p>
                                     <div class="services-one__read-more">
-                                        <a href="modified-roofing.html">Read More <i class="fa fa-arrow-right"></i></a>
+                                        <a href="bathroom.html">Read More <i class="fa fa-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -610,10 +654,10 @@
                                     <div class="services-one__icon">
                                         <img src="assets/images/resources/basement.png" alt="" width="50px" height="50px">
                                     </div>
-                                    <h3 class="services-one__title"><a href="built-up-roofing.html">Basement Remodeling</a></h3>
+                                    <h3 class="services-one__title"><a href="basement.html">Basement Remodeling</a></h3>
                                     <p class="services-one__text">Unlock the potential of your basement with our exceptional remodeling expertise.</p>
                                     <div class="services-one__read-more">
-                                        <a href="built-up-roofing.html">Read More <i class="fa fa-arrow-right"></i></a>
+                                        <a href="basement.html">Read More <i class="fa fa-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -629,10 +673,10 @@
                                     <div class="services-one__icon">
                                         <span class="icon-roof-1"></span>
                                     </div>
-                                    <h3 class="services-one__title"><a href="built-up-roofing.html">Home <br> Additions</a></h3>
+                                    <h3 class="services-one__title"><a href="homeadditions.html">Home <br> Additions</a></h3>
                                     <p class="services-one__text">Expand your living space and possibilities with our seamless home additions. <br>&nbsp;</p>
                                     <div class="services-one__read-more">
-                                        <a href="built-up-roofing.html">Read More <i class="fa fa-arrow-right"></i></a>
+                                        <a href="homeadditions.html">Read More <i class="fa fa-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -871,12 +915,6 @@
                                 <!--Brand One Single-->
                                 <div class="brand-one__single">
                                     <div class="brand-one__img">
-                                        <img src="assets/images/brand/brand-1-5.png" alt="">
-                                    </div>
-                                </div>
-                                <!--Brand One Single-->
-                                <div class="brand-one__single">
-                                    <div class="brand-one__img">
                                         <img src="assets/images/brand/brand-1-6.png" alt="">
                                     </div>
                                 </div>
@@ -972,31 +1010,23 @@
                         <ul
                             class="project-filter style1 post-filter has-dynamic-filters-counter list-unstyled clearfix">
                             <li data-filter=".filter-item" class="active"><span class="filter-text">&nbsp;All&nbsp;</span></li>
-                            <li data-filter=".comm"><span class="filter-text">&nbsp;&nbsp;Kitchen&nbsp&nbsp;</span></li>
-                            <li data-filter=".ind"><span class="filter-text">&nbsp;&nbsp;Bathroom&nbsp;&nbsp;</span></li>
-                            <li data-filter=".res"><span class="filter-text">&nbsp;&nbsp;Basement&nbsp;&nbsp;</span></li>
+                            <li data-filter=".kitchen"><span class="filter-text">&nbsp;&nbsp;Kitchen&nbsp&nbsp;</span></li>
+                            <li data-filter=".bathroom"><span class="filter-text">&nbsp;&nbsp;Bathroom&nbsp;&nbsp;</span></li>
+                            <li data-filter=".basement"><span class="filter-text">&nbsp;&nbsp;Basement&nbsp;&nbsp;</span></li>
                         </ul>
                     </div>
                 </div>
                 <div class="project-two__bottom">
                     <div class="row filter-layout masonary-layout">
                         <!--Project Two Single Start-->
-                        <div class="col-xl-4 col-lg-6 col-md-6 filter-item comm res">
+                        <div class="col-xl-4 col-lg-6 col-md-6 filter-item kitchen">
                             <div class="project-two__single">
                                 <div class="project-two__img-box">
                                     <div class="project-two__img">
-                                        <img src="assets/images/project/project-2-1.jpg" alt="">
-                                    </div>
-                                    <div class="project-two__content">
-                                        <div class="project-two__icon">
-                                            <img src="assets/images/icon/project-two-icon.png" alt="">
-                                        </div>
-                                        <p class="project-two__sub-title">Commercial, Residential</p>
-                                        <h3 class="project-two__title"><a href="work-details.html">Modern roofing
-                                                style</a></h3>
+                                        <img src="assets/images/gallery/kitchen_resized/one.jpg" alt="">
                                     </div>
                                     <div class="project-two__link">
-                                        <a class="img-popup" href="assets/images/project/project-2-1.jpg"><i
+                                        <a class="img-popup" href="assets/images/gallery/kitchen_resized/one.jpg"><i
                                                 class="fa fa-link"></i></a>
                                     </div>
                                 </div>
@@ -1004,22 +1034,14 @@
                         </div>
                         <!--Project Two Single End-->
                         <!--Project Two Single Start-->
-                        <div class="col-xl-4 col-lg-6 col-md-6 filter-item comm ind">
+                        <div class="col-xl-4 col-lg-6 col-md-6 filter-item kitchen">
                             <div class="project-two__single">
                                 <div class="project-two__img-box">
                                     <div class="project-two__img">
-                                        <img src="assets/images/project/project-2-2.jpg" alt="">
-                                    </div>
-                                    <div class="project-two__content">
-                                        <div class="project-two__icon">
-                                            <img src="assets/images/icon/project-two-icon.png" alt="">
-                                        </div>
-                                        <p class="project-two__sub-title">Commercial, Residential</p>
-                                        <h3 class="project-two__title"><a href="work-details.html">Modern roofing
-                                                style</a></h3>
+                                        <img src="assets/images/gallery/kitchen_resized/2.jpg" alt="">
                                     </div>
                                     <div class="project-two__link">
-                                        <a class="img-popup" href="assets/images/project/project-2-2.jpg"><i
+                                        <a class="img-popup" href="assets/images/gallery/kitchen_resized/2.jpg"><i
                                                 class="fa fa-link"></i></a>
                                     </div>
                                 </div>
@@ -1027,22 +1049,14 @@
                         </div>
                         <!--Project Two Single End-->
                         <!--Project Two Single Start-->
-                        <div class="col-xl-4 col-lg-6 col-md-6 filter-item res ind">
+                        <div class="col-xl-4 col-lg-6 col-md-6 filter-item kitchen">
                             <div class="project-two__single">
                                 <div class="project-two__img-box">
                                     <div class="project-two__img">
-                                        <img src="assets/images/project/project-2-3.jpg" alt="">
-                                    </div>
-                                    <div class="project-two__content">
-                                        <div class="project-two__icon">
-                                            <img src="assets/images/icon/project-two-icon.png" alt="">
-                                        </div>
-                                        <p class="project-two__sub-title">Commercial, Residential</p>
-                                        <h3 class="project-two__title"><a href="work-details.html">Modern roofing
-                                                style</a></h3>
+                                        <img src="assets/images/gallery/kitchen_resized/3.jpg" alt="">
                                     </div>
                                     <div class="project-two__link">
-                                        <a class="img-popup" href="assets/images/project/project-2-3.jpg"><i
+                                        <a class="img-popup" href="assets/images/gallery/kitchen_resized/3.jpg"><i
                                                 class="fa fa-link"></i></a>
                                     </div>
                                 </div>
@@ -1050,22 +1064,14 @@
                         </div>
                         <!--Project Two Single End-->
                         <!--Project Two Single Start-->
-                        <div class="col-xl-4 col-lg-6 col-md-6 filter-item comm res">
+                        <div class="col-xl-4 col-lg-6 col-md-6 filter-item kitchen">
                             <div class="project-two__single">
                                 <div class="project-two__img-box">
                                     <div class="project-two__img">
-                                        <img src="assets/images/project/project-2-4.jpg" alt="">
-                                    </div>
-                                    <div class="project-two__content">
-                                        <div class="project-two__icon">
-                                            <img src="assets/images/icon/project-two-icon.png" alt="">
-                                        </div>
-                                        <p class="project-two__sub-title">Commercial, Residential</p>
-                                        <h3 class="project-two__title"><a href="work-details.html">Modern roofing
-                                                style</a></h3>
+                                        <img src="assets/images/gallery/kitchen_resized/4.jpg" alt="">
                                     </div>
                                     <div class="project-two__link">
-                                        <a class="img-popup" href="assets/images/project/project-2-4.jpg"><i
+                                        <a class="img-popup" href="assets/images/gallery/kitchen_resized/4.jpg"><i
                                                 class="fa fa-link"></i></a>
                                     </div>
                                 </div>
@@ -1073,22 +1079,14 @@
                         </div>
                         <!--Project Two Single End-->
                         <!--Project Two Single Start-->
-                        <div class="col-xl-4 col-lg-6 col-md-6 filter-item comm ind">
+                        <div class="col-xl-4 col-lg-6 col-md-6 filter-item kitchen">
                             <div class="project-two__single">
                                 <div class="project-two__img-box">
                                     <div class="project-two__img">
-                                        <img src="assets/images/project/project-2-5.jpg" alt="">
-                                    </div>
-                                    <div class="project-two__content">
-                                        <div class="project-two__icon">
-                                            <img src="assets/images/icon/project-two-icon.png" alt="">
-                                        </div>
-                                        <p class="project-two__sub-title">Commercial, Residential</p>
-                                        <h3 class="project-two__title"><a href="work-details.html">Modern roofing
-                                                style</a></h3>
+                                        <img src="assets/images/gallery/kitchen_resized/5.jpg" alt="">
                                     </div>
                                     <div class="project-two__link">
-                                        <a class="img-popup" href="assets/images/project/project-2-5.jpg"><i
+                                        <a class="img-popup" href="assets/images/gallery/kitchen_resized/5.jpg"><i
                                                 class="fa fa-link"></i></a>
                                     </div>
                                 </div>
@@ -1096,28 +1094,276 @@
                         </div>
                         <!--Project Two Single End-->
                         <!--Project Two Single Start-->
-                        <div class="col-xl-4 col-lg-6 col-md-6 filter-item res ind">
+                        <div class="col-xl-4 col-lg-6 col-md-6 filter-item kitchen">
                             <div class="project-two__single">
                                 <div class="project-two__img-box">
                                     <div class="project-two__img">
-                                        <img src="assets/images/project/project-2-6.jpg" alt="">
-                                    </div>
-                                    <div class="project-two__content">
-                                        <div class="project-two__icon">
-                                            <img src="assets/images/icon/project-two-icon.png" alt="">
-                                        </div>
-                                        <p class="project-two__sub-title">Commercial, Residential</p>
-                                        <h3 class="project-two__title"><a href="work-details.html">Modern roofing
-                                                style</a></h3>
+                                        <img src="assets/images/gallery/kitchen_resized/6.jpg" alt="">
                                     </div>
                                     <div class="project-two__link">
-                                        <a class="img-popup" href="assets/images/project/project-2-6.jpg"><i
+                                        <a class="img-popup" href="assets/images/gallery/kitchen_resized/6.jpg"><i
                                                 class="fa fa-link"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!--Project Two Single End-->
+                        <!--Project Two Single Start-->
+                        <div class="col-xl-4 col-lg-6 col-md-6 filter-item kitchen">
+                            <div class="project-two__single">
+                                <div class="project-two__img-box">
+                                    <div class="project-two__img">
+                                        <img src="assets/images/gallery/kitchen_resized/7.jpg" alt="">
+                                    </div>
+                                    <div class="project-two__link">
+                                        <a class="img-popup" href="assets/images/gallery/kitchen_resized/7.jpg"><i
+                                                class="fa fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Project Two Single End-->
+                        <!--Project Two Single Start-->
+                        <div class="col-xl-4 col-lg-6 col-md-6 filter-item kitchen">
+                            <div class="project-two__single">
+                                <div class="project-two__img-box">
+                                    <div class="project-two__img">
+                                        <img src="assets/images/gallery/kitchen_resized/8.jpg" alt="">
+                                    </div>
+                                    <div class="project-two__link">
+                                        <a class="img-popup" href="assets/images/gallery/kitchen_resized/8.jpg"><i
+                                                class="fa fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Project Two Single End-->
+                        <!--Project Two Single Start-->
+                        <div class="col-xl-4 col-lg-6 col-md-6 filter-item kitchen">
+                            <div class="project-two__single">
+                                <div class="project-two__img-box">
+                                    <div class="project-two__img">
+                                        <img src="assets/images/gallery/kitchen_resized/9.jpg" alt="">
+                                    </div>
+                                    <div class="project-two__link">
+                                        <a class="img-popup" href="assets/images/gallery/kitchen_resized/9.jpg"><i
+                                                class="fa fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Project Two Single End-->
+                        <!--Project Two Single Start-->
+                        <div class="col-xl-4 col-lg-6 col-md-6 filter-item bathroom">
+                            <div class="project-two__single">
+                                <div class="project-two__img-box">
+                                    <div class="project-two__img">
+                                        <img src="assets/images/gallery/bathroom_resized/gallery3-640w.jpg" alt="">
+                                    </div>
+                                    <div class="project-two__link">
+                                        <a class="img-popup" href="assets/images/gallery/bathroom_resized/gallery3-640w.jpg"><i
+                                                class="fa fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Project Two Single End-->
+                        <!--Project Two Single Start-->
+                        <div class="col-xl-4 col-lg-6 col-md-6 filter-item bathroom">
+                            <div class="project-two__single">
+                                <div class="project-two__img-box">
+                                    <div class="project-two__img">
+                                        <img src="assets/images/gallery/bathroom_resized/gallery4-640w.jpg" alt="">
+                                    </div>
+                                    <div class="project-two__link">
+                                        <a class="img-popup" href="assets/images/gallery/bathroom_resized/gallery4-640w.jpg"><i
+                                                class="fa fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Project Two Single End-->
+                        <!--Project Two Single Start-->
+                        <div class="col-xl-4 col-lg-6 col-md-6 filter-item bathroom">
+                            <div class="project-two__single">
+                                <div class="project-two__img-box">
+                                    <div class="project-two__img">
+                                        <img src="assets/images/gallery/bathroom_resized/gallery6-640w.jpg" alt="">
+                                    </div>
+                                    <div class="project-two__link">
+                                        <a class="img-popup" href="assets/images/gallery/bathroom_resized/IMG_3789 (1).jpg"><i
+                                                class="fa fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Project Two Single End-->
+                        <!--Project Two Single Start-->
+                        <div class="col-xl-4 col-lg-6 col-md-6 filter-item bathroom">
+                            <div class="project-two__single">
+                                <div class="project-two__img-box">
+                                    <div class="project-two__img">
+                                        <img src="assets/images/gallery/bathroom_resized/project2-52a15220-640w.jpg" alt="">
+                                    </div>
+                                    <div class="project-two__link">
+                                        <a class="img-popup" href="assets/images/gallery/bathroom_resized/project2-52a15220-640w.jpg"><i
+                                                class="fa fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Project Two Single End-->
+                        <!--Project Two Single Start-->
+                        <div class="col-xl-4 col-lg-6 col-md-6 filter-item bathroom">
+                            <div class="project-two__single">
+                                <div class="project-two__img-box">
+                                    <div class="project-two__img">
+                                        <img src="assets/images/gallery/bathroom_resized/project3-35068812-640w.jpg" alt="">
+                                    </div>
+                                    <div class="project-two__link">
+                                        <a class="img-popup" href="assets/images/gallery/bathroom_resized/project3-35068812-640w.jpg"><i
+                                                class="fa fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Project Two Single End-->
+                        <!--Project Two Single Start-->
+                        <div class="col-xl-4 col-lg-6 col-md-6 filter-item bathroom">
+                            <div class="project-two__single">
+                                <div class="project-two__img-box">
+                                    <div class="project-two__img">
+                                        <img src="assets/images/gallery/bathroom_resized/project6-e780c17b-640w.jpg" alt="">
+                                    </div>
+                                    <div class="project-two__link">
+                                        <a class="img-popup" href="assets/images/gallery/bathroom_resized/project6-e780c17b-640w.jpg"><i
+                                                class="fa fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Project Two Single End-->
+                        <!--Project Two Single Start-->
+                        <div class="col-xl-4 col-lg-6 col-md-6 filter-item basement">
+                            <div class="project-two__single">
+                                <div class="project-two__img-box">
+                                    <div class="project-two__img">
+                                        <img src="assets/images/gallery/basement_resized/IMG_0841.jpg" alt="">
+                                    </div>
+                                    <div class="project-two__link">
+                                        <a class="img-popup" href="assets/images/gallery/basement_resized/IMG_0841.jpg"><i
+                                                class="fa fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Project Two Single End-->
+                        <!--Project Two Single Start-->
+                        <div class="col-xl-4 col-lg-6 col-md-6 filter-item basement">
+                            <div class="project-two__single">
+                                <div class="project-two__img-box">
+                                    <div class="project-two__img">
+                                        <img src="assets/images/gallery/basement_resized/IMG_3696.jpg" alt="">
+                                    </div>
+                                    <div class="project-two__link">
+                                        <a class="img-popup" href="assets/images/gallery/basement_resized/IMG_3696.jpg"><i
+                                                class="fa fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Project Two Single End-->
+                        <!--Project Two Single Start-->
+                        <div class="col-xl-4 col-lg-6 col-md-6 filter-item basement">
+                            <div class="project-two__single">
+                                <div class="project-two__img-box">
+                                    <div class="project-two__img">
+                                        <img src="assets/images/gallery/basement_resized/IMG_3700.jpg" alt="">
+                                    </div>
+                                    <div class="project-two__link">
+                                        <a class="img-popup" href="assets/images/gallery/basement_resized/IMG_3700.jpg"><i
+                                                class="fa fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Project Two Single End-->
+                        <!--Project Two Single Start-->
+                        <div class="col-xl-4 col-lg-6 col-md-6 filter-item basement">
+                            <div class="project-two__single">
+                                <div class="project-two__img-box">
+                                    <div class="project-two__img">
+                                        <img src="assets/images/gallery/basement_resized/IMG_4440.jpg" alt="">
+                                    </div>
+                                    <div class="project-two__link">
+                                        <a class="img-popup" href="assets/images/gallery/basement_resized/IMG_4440.jpg"><i
+                                                class="fa fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Project Two Single End-->
+                        <!--Project Two Single Start-->
+                        <div class="col-xl-4 col-lg-6 col-md-6 filter-item basement">
+                            <div class="project-two__single">
+                                <div class="project-two__img-box">
+                                    <div class="project-two__img">
+                                        <img src="assets/images/gallery/basement_resized/IMG_4442.jpg" alt="">
+                                    </div>
+                                    <div class="project-two__link">
+                                        <a class="img-popup" href="assets/images/gallery/basement_resized/IMG_4442.jpg"><i
+                                                class="fa fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Project Two Single End-->
+                        <!--Project Two Single Start-->
+                        <div class="col-xl-4 col-lg-6 col-md-6 filter-item basement">
+                            <div class="project-two__single">
+                                <div class="project-two__img-box">
+                                    <div class="project-two__img">
+                                        <img src="assets/images/gallery/basement_resized/project1-65aeee29-640w.jpg" alt="">
+                                    </div>
+                                    <div class="project-two__link">
+                                        <a class="img-popup" href="assets/images/gallery/basement_resized/project1-65aeee29-640w.jpg"><i
+                                                class="fa fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Project Two Single End-->
+                        <!--Project Two Single Start-->
+                        <div class="col-xl-4 col-lg-6 col-md-6 filter-item basement">
+                            <div class="project-two__single">
+                                <div class="project-two__img-box">
+                                    <div class="project-two__img">
+                                        <img src="assets/images/gallery/basement_resized/project4-3b890752-640w.jpg" alt="">
+                                    </div>
+                                    <div class="project-two__link">
+                                        <a class="img-popup" href="assets/images/gallery/basement_resized/project4-3b890752-640w.jpg"><i
+                                                class="fa fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Project Two Single End-->
+                        <!--Project Two Single Start-->
+                        <div class="col-xl-4 col-lg-6 col-md-6 filter-item basement">
+                            <div class="project-two__single">
+                                <div class="project-two__img-box">
+                                    <div class="project-two__img">
+                                        <img src="assets/images/gallery/basement_resized/project5-3ba41e7d-640w.jpg" alt="">
+                                    </div>
+                                    <div class="project-two__link">
+                                        <a class="img-popup" href="assets/images/gallery/basement_resized/project5-3ba41e7d-640w.jpg"><i
+                                                class="fa fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Project Two Single End-->
+
                     </div>
                 </div>
             </div>
@@ -1138,7 +1384,7 @@
                     <div class="col-xl-6 col-lg-7">
                         <div class="trust-company__left">
                             <div class="trust-company__video-link">
-                                <a href="https://www.youtube.com/watch?v=Get7rqXYrbQ" class="video-popup">
+                                <a href="https://www.youtube.com/watch?v=EDxws1LIQgM" class="video-popup">
                                     <div class="trust-company__video-icon">
                                         <span class="fa fa-play"></span>
                                         <i class="ripple"></i>
@@ -1327,99 +1573,6 @@
         </section>
         <!--Testimonial One End-->
 
-        <!--Blog One Start-->
-        <section class="blog-one">
-            <div class="container">
-                <div class="section-title text-center">
-                    <div class="section-sub-title-box">
-                        <p class="section-sub-title">News & Updates</p>
-                        <div class="section-title-shape-1">
-                            <img src="assets/images/shapes/logo-small-rgb.png" alt="" class="mini-logo-height">
-                        </div>
-                    </div>
-                    <h2 class="section-title__title">Stay update with us <br> news & articles</h2>
-                </div>
-                <div class="row">
-                    <!--Blog One Single Start-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
-                        <div class="blog-one__single">
-                            <div class="blog-one__img">
-                                <img src="assets/images/blog/blog-1-1.jpg" alt="" class="blog-image-size">
-                            </div>
-                            <div class="blog-one__content">
-                                <div class="blog-one__user">
-                                    <div class="blog-one__user-img">
-                                        <img src="assets/images/blog/blog-one-user-1-1.jpg" alt="">
-                                    </div>
-                                    <div class="blog-one__user-content">
-                                        <p>by Design Kitchen & Bath</p>
-                                        <h5>January 28, 2023</h5>
-                                    </div>
-                                </div>
-                                <h3 class="blog-one__title"><a href="blog-details.html">Avoid the five most detrimental kitchen design mistakes.</a></h3>
-                                <p class="blog-one__text">Designing a kitchen requires careful planning to ensure it's functional, efficient, and aesthetically pleasing.<br><br></p>
-                                <div class="blog-one__read-more">
-                                    <a href="blog-details.html">Read More <i class="fa fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Blog One Single End-->
-                    <!--Blog One Single Start-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="200ms">
-                        <div class="blog-one__single">
-                            <div class="blog-one__img">
-                                <img src="assets/images/blog/blog-1-2.jpg" alt="" class="blog-image-size"">
-                            </div>
-                            <div class="blog-one__content">
-                                <div class="blog-one__user">
-                                    <div class="blog-one__user-img">
-                                        <img src="assets/images/blog/blog-one-user-1-2.jpg" alt="">
-                                    </div>
-                                    <div class="blog-one__user-content">
-                                        <p>by Design Kitchen & Bath</p>
-                                        <h5>May 4, 2022</h5>
-                                    </div>
-                                </div>
-                                <h3 class="blog-one__title"><a href="blog-details.html">Common Mistakes to Avoid When Designing a Small Bathroom</a></h3>
-                                <p class="blog-one__text">Designing a small bathroom can be a challenge, but with careful planning and consideration, you can make the most of the available space.</p>
-                                <div class="blog-one__read-more">
-                                    <a href="blog-details.html">Read More <i class="fa fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Blog One Single End-->
-                    <!--Blog One Single Start-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms">
-                        <div class="blog-one__single">
-                            <div class="blog-one__img">
-                                <img src="assets/images/blog/blog-1-3.jpg" alt="" class="blog-image-size">
-                            </div>
-                            <div class="blog-one__content">
-                                <div class="blog-one__user">
-                                    <div class="blog-one__user-img">
-                                        <img src="assets/images/blog/blog-one-user-1-3.jpg" alt="">
-                                    </div>
-                                    <div class="blog-one__user-content">
-                                        <p>by Design Kitchen & Bath</p>
-                                        <h5>July 17, 2023</h5>
-                                    </div>
-                                </div>
-                                <h3 class="blog-one__title"><a href="blog-details.html">Avoid these typical mistakes when designing a basement</a></h3>
-                                <p class="blog-one__text">Designing a basement can be an exciting project, but there are several pitfalls to watch out for to ensure you create a functional and inviting space.</p>
-                                <div class="blog-one__read-more">
-                                    <a href="blog-details.html">Read More <i class="fa fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Blog One Single End-->
-                </div>
-            </div>
-        </section>
-        <!--Blog One End-->
-
         <!--Appointment Start
         <section class="appointment">
             
@@ -1549,7 +1702,7 @@
                                 <ul class="footer-widget__explore-list list-unstyled clearfix">
                                     <li><a href="about.html">About</a></li>
                                     <li><a href="contact.html">Contact</a></li>
-                                    <li><a href="work.html">Recent Works</a></li>
+                                    <!-- <li><a href="work.html">Recent Works</a></li> -->
                                     <li><a href="team.html">Our Team</a></li>
                                     <li><a href="testimonials.html">Testimonials</a></li>
                                 </ul>
@@ -1694,6 +1847,17 @@
 
     <!-- template js -->
     <script src="assets/js/roofsie.js"></script>
-</body>
+
+
+    
+<!-- Start of OpenWidget (www.openwidget.com) code -->
+<script>
+    window.__ow = window.__ow || {};
+    window.__ow.organizationId = "44735c40-4ffd-41c1-a76c-58ece9d877f6";
+    ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[OpenWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.openwidget.com/openwidget.js",t.head.appendChild(n)}};!n.__ow.asyncInit&&e.init(),n.OpenWidget=n.OpenWidget||e}(window,document,[].slice))
+  </script>
+  <noscript>You need to <a href="https://www.openwidget.com/enable-javascript" rel="noopener nofollow">enable JavaScript</a> to use the communication tool powered by <a href="https://www.openwidget.com/" rel="noopener nofollow" target="_blank">OpenWidget</a></noscript>
+  <!-- End of OpenWidget code -->
+  
 
 </html>
