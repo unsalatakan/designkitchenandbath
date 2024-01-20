@@ -436,12 +436,34 @@ ul {
 
 .main-header__logo {
   position: absolute !important;
-  top: -10px !important;
+  top: 0px !important;
   left: 60px !important;
   z-index: 9999999999 !important;
   width: 175px !important;
   
 }
+
+@media screen and (max-width: 1400px) and (min-width: 991px) {
+  .main-header__logo {
+    position: absolute !important;
+    top: 0px !important;
+    left: 20px !important;
+    z-index: 9999999999 !important;
+    width: 175px !important;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .main-header__logo {
+    position: absolute !important;
+    top: -40px !important;
+    left: 20px !important;
+    z-index: 9999999999 !important;
+    width: 175px !important;
+  }
+}
+
+
 
 .main-header__top {
   position: relative;
