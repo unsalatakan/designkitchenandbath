@@ -5,25 +5,22 @@ include("../actions/con.php");
 if (!isset($_SESSION["username"])) {
     header("Location: index.html");
     exit();
-}else{
-  $username = $_SESSION["username"];
 }
+
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="apple-touch-icon" sizes="76x76" href="../assets/images/loader.jpg">
-    <link rel="icon" type="image/png" href="../assets/images/loader.jpg">
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
     <title>
-        DKB Warehouse
+        Soft UI Dashboard by Creative Tim
     </title>
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -38,21 +35,14 @@ ini_set('display_errors', 1);
     <!-- Nepcha Analytics (nepcha.com) -->
     <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
     <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
-  <link href="../assets/css/datatables.min.css" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
-  <script src="../assets/js/datatables.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  
-
-</head>
-
-
+    <link href="../assets/css/datatables.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+    <script src="../assets/js/datatables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body class="g-sidenav-show  bg-gray-100">
-
-
     <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 "
         id="sidenav-main">
         <div class="sidenav-header">
@@ -66,7 +56,7 @@ ini_set('display_errors', 1);
         <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" href="../pages/dashboard.php">
+                    <a class="nav-link " href="../pages/dashboard.php">
                         <div
                             class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                             <svg width="12px" height="12px" viewBox="0 0 45 40" version="1.1"
@@ -93,7 +83,7 @@ ini_set('display_errors', 1);
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link  " href="../pages/materials.php">
+                    <a class="nav-link" href="../pages/materials.php">
                         <div
                             class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                             <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1"
@@ -120,7 +110,7 @@ ini_set('display_errors', 1);
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link  " href="../pages/orders.php">
+                    <a class="nav-link active" href="../pages/orders.php">
                         <div
                             class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2V6l-3-4H6zM3.8 6h16.4M16 10a4 4 0 1 1-8 0"/></svg>
@@ -179,7 +169,7 @@ ini_set('display_errors', 1);
                     <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
                         <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a>
                         </li>
-                        <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Dashboard</li>
+                        <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Materials</li>
                     </ol>
                 </nav>
                 <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
@@ -223,367 +213,36 @@ ini_set('display_errors', 1);
         <!-- End Navbar -->
         <div class="container-fluid py-4">
             <div class="row">
-                <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4 floating-element">
-                    <div class="card">
-                        <div class="card-body p-3">
-                            <div class="row">
-                                <div class="col-8">
-                                    <div class="numbers">
-                                        <p class="text-sm mb-0 text-capitalize font-weight-bold">Total Item</p>
-                                        <h5 class="font-weight-bolder mb-0">
-                                            <?php 
-                        $sql = "SELECT * FROM item";
-                        $result = $conn->query($sql);
-                        echo $result->num_rows;
-                      ?>
-                                        </h5>
-                                    </div>
-                                </div>
-                                <div class="col-4 text-end">
-                                    <div
-                                        class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                                        <i class="ni ni-box-2 text-lg opacity-10" aria-hidden="true"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4 floating-element">
-                    <div class="card">
-                        <div class="card-body p-3">
-                            <div class="row">
-                                <div class="col-8">
-                                    <div class="numbers">
-                                        <p class="text-sm mb-0 text-capitalize font-weight-bold">Waiting for deliver</p>
-                                        <h5 class="font-weight-bolder mb-0">
-                                            <?php 
-                        $sql = "SELECT * FROM item WHERE item_status = 'ordered'";
-                        $result = $conn->query($sql);
-                        echo $result->num_rows;
-                      ?>
-                                        </h5>
-                                    </div>
-                                </div>
-                                <div class="col-4 text-end">
-                                    <div
-                                        class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                                        <i class="ni ni-delivery-fast text-lg opacity-10" aria-hidden="true"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4 floating-element">
-                    <div class="card">
-                        <div class="card-body p-3">
-                            <div class="row">
-                                <div class="col-8">
-                                    <div class="numbers">
-                                        <p class="text-sm mb-0 text-capitalize font-weight-bold">Ready to pick up</p>
-                                        <h5 class="font-weight-bolder mb-0">
-                                            <?php 
-                        $sql = "SELECT * FROM item WHERE item_status = 'readytopickup'";
-                        $result = $conn->query($sql);
-                        echo $result->num_rows;
-                      ?>
-                                        </h5>
-                                    </div>
-                                </div>
-                                <div class="col-4 text-end">
-                                    <div
-                                        class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                                        <i class="ni ni-shop text-lg opacity-10" aria-hidden="true"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-sm-6 floating-element">
-                    <div class="card">
-                        <div class="card-body p-3">
-                            <div class="row">
-                                <div class="col-8">
-                                    <div class="numbers">
-                                        <p class="text-sm mb-0 text-capitalize font-weight-bold">Delivered to Customer
-                                        </p>
-                                        <h5 class="font-weight-bolder mb-0">
-                                            <?php 
-                        $sql = "SELECT * FROM item WHERE item_status = 'completed'";
-                        $result = $conn->query($sql);
-                        echo $result->num_rows;
-                      ?>
-                                        </h5>
-                                    </div>
-                                </div>
-                                <div class="col-4 text-end">
-                                    <div
-                                        class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                                        <i class="ni ni-check-bold text-lg opacity-10" aria-hidden="true"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row my-4">
-                <div class="col-lg-12 col-md-12 mb-md-0 mb-4">
-                    <div class="card">
+                <div class="col-12">
+                    <div class="card mb-4">
                         <div class="card-header pb-0">
-                            <div class="row justify-content-between">
-                                <div class="col-6">
-                                    <h3>Projects</h3>
-                                </div>
-                                <?php
-                                if($_SESSION['usertype'] == 'admin'){
-                                 echo "
-                                 <div class='col-6 d-flex justify-content-end'>
-                                    <a class='btn btn-outline-primary btn-sm' type='button' data-bs-toggle='modal'
-                                        data-bs-target='#exampleModal'>NEW PROJECT</a>
-                                 </div>
-                                 ";
-                                }
-                                ?>
-                                
-                            </div>
+                            <h3>All Orders</h3>
                         </div>
-                        <div class="card-body px-0 pb-2">
-                            <div class="table-responsive px-3">
-                              <?php include("../extension/projecttable.php");?>
+                        <div class="card-body px-0 pt-0 pb-2">
+                            <div class="table-responsive px-3 pt-3">
+                                <?php include("../extension/materialstable.php");?>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <footer class="d-flex flex-column justify-content-between">
+                <div class="container-fluid">
+                    <div class="row align-items-center justify-content-lg-between">
+                        <div class="col-lg-6 mb-lg-0 mb-4">
+                            <div class="copyright text-center text-sm text-muted text-lg-start">
+                                © <script>
+                                document.write(new Date().getFullYear())
+                                </script>,
+                                made by
+                                <a class="font-weight-bold">Atakan Unsal</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
-        <footer class="d-flex flex-column justify-content-between">
-            <div class="container-fluid">
-                <div class="row align-items-center justify-content-lg-between">
-                    <div class="col-lg-6 mb-lg-0 mb-4">
-                        <div class="copyright text-center text-sm text-muted text-lg-start">
-                            © <script>
-                            document.write(new Date().getFullYear())
-                            </script>,
-                            made by
-                            <a class="font-weight-bold">Atakan Unsal</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
     </main>
-
-    <!-- Modal Order Request-->
-    <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
-        data-bs-backdrop="static" data-bs-keyboard="false">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Order Request</h5>
-                </div>
-                <div class="modal-body">
-                <form action="../extension/orderrequest.php">
-                        <div class="form-group">
-                            <h6 for="exampleInputJobName">Choose Job Name</h6>
-                            <select class="form-select" aria-label="Default select example" id="po_name" name="po_name" required>
-                                <option selected disabled value="">Choose JOB</option>
-                            <?php 
-                            $sql = "SELECT po_name FROM purchase_order";
-                            $result = $conn->query($sql);
-                            if ($result->num_rows > 0) {
-                                while ($row = $result->fetch_assoc()) {
-                                    echo '<option value="' . $row["po_name"] . '">' . $row["po_name"] . '</option>';
-                                }
-                            }
-                            ?>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <h6 for="exampleInputJobStart">ASSIGN TO</h6>
-                            <select class="form-select" aria-label="Default select example"
-                            id="order_manager" name="order_manager" placeholder="Order Manager" required>
-                            <option selected disabled value="">Choose Order Manager</option>
-                            <?php 
-                                $sql = "SELECT `user_name` FROM user WHERE user_type = 'om' OR `user_type` = 'admin'";
-                                $result = $conn->query($sql);
-                                if ($result->num_rows > 0) {
-                                    while ($row = $result->fetch_assoc()) {
-                                        echo '<option value="' . $row["user_name"] . '">' . $row["user_name"] . '</option>';
-                                    }
-                                }
-                            ?>
-                        </select>
-                        </div>
-                        <div style="display:none" class="form-group">
-                            <input type="text" class="form-control" id="from" name="from" value="<?php echo strtoupper($_SESSION["username"]);?>"
-                                placeholder="from Name" required>
-                        </div>
-                        <div class="form-group">
-                            <h6 for="exampleInputJobStart">MATERIAL NAME</h6>
-                            <input type="text" class="form-control" id="material_name" name="material_name"
-                                placeholder="Material Name" required>
-                        </div>
-                        <div class="form-group">
-                            <h6 for="exampleInputQuantity">MATERIAL LINK (Optional)</h6>
-                            <input type="text" class="form-control" id="material_link" name="material_link"
-                                placeholder="Material Link">
-                        </div>
-                        <div class="form-group">
-                            <h6 for="exampleInputQuantity">Quantity</h6>
-                            <input type="number" class="form-control" id="quantity" name="quantity"
-                                placeholder="Quantity" required>
-                        </div>
-                        <div class="form-group">
-                            <h6 for="exampleInputQuantity">Description (Optional)</h6>
-                            <input type="text" class="form-control" id="description" name="description"
-                                placeholder="Material Description">
-                        </div>
-                        <div class="form-group">
-                            <h6 for="exampleInputQuantity">Explain</h6>
-                            <input type="text" class="form-control" id="reason" name="reason"
-                                placeholder="Please explain why do you need that order!" required>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" style="width: 48%;"
-                                data-bs-dismiss="modal">Cancel</button>
-                            <button type="submit" class="btn btn-success" style="width: 48%;">Submit Request</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <!-- Create New Project Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">ADD NEW PROJECT</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form action="../actions/addproject.php" method="POST" enctype="multipart/form-data">
-                        <div class="form-group">
-                            <h6 for="exampleInputJobName">Project Name</h6>
-                            <input type="text" class="form-control" id="po_name" name="po_name" aria-describedby="jobName"
-                                placeholder="Enter JOB Name" required>
-                        </div>
-                        <div class="form-group">
-                            <h6 for="exampleInputJobStart">Project Start Date</h6>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <select class="form-select" aria-label="Default select example" id="po_start_date_mm" name="po_start_date_mm"
-                                        required>
-                                        <option selected disabled value="">Month</option>
-                                        <option value="01">01</option>
-                                        <option value="02">02</option>
-                                        <option value="03">03</option>
-                                        <option value="04">04</option>
-                                        <option value="05">05</option>
-                                        <option value="06">06</option>
-                                        <option value="07">07</option>
-                                        <option value="08">08</option>
-                                        <option value="09">09</option>
-                                        <option value="10">10</option>
-                                        <option value="11">11</option>
-                                        <option value="12">12</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-4">
-                                    <select class="form-select" aria-label="Default select example" id="po_start_date_dd" name="po_start_date_dd"
-                                        required>
-                                        <option selected disabled value="">Day</option>
-                                        <option value="01">01</option>
-                                        <option value="02">02</option>
-                                        <option value="03">03</option>
-                                        <option value="04">04</option>
-                                        <option value="05">05</option>
-                                        <option value="06">06</option>
-                                        <option value="07">07</option>
-                                        <option value="08">08</option>
-                                        <option value="09">09</option>
-                                        <option value="10">10</option>
-                                        <option value="11">11</option>
-                                        <option value="12">12</option>
-                                        <option value="13">13</option>
-                                        <option value="14">14</option>
-                                        <option value="15">15</option>
-                                        <option value="16">16</option>
-                                        <option value="17">17</option>
-                                        <option value="18">18</option>
-                                        <option value="19">19</option>
-                                        <option value="20">20</option>
-                                        <option value="21">21</option>
-                                        <option value="22">22</option>
-                                        <option value="23">23</option>
-                                        <option value="24">24</option>
-                                        <option value="25">25</option>
-                                        <option value="26">26</option>
-                                        <option value="27">27</option>
-                                        <option value="28">28</option>
-                                        <option value="29">29</option>
-                                        <option value="30">30</option>
-                                        <option value="31">31</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-4">
-                                    <select class="form-select" aria-label="Default select example" id="po_start_date_yy" name="po_start_date_yy"
-                                        required>
-                                        <option selected disabled value="">Year</option>
-                                        <option value="22">22</option>
-                                        <option value="23">23</option>
-                                        <option value="24">24</option>
-                                        <option value="25">25</option>
-                                        <option value="26">26</option>
-                                        <option value="27">27</option>
-                                        <option value="28">28</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    <div class="form-group">
-                        <h6 for="exampleInputJobStart">Project Type</h6>
-                        <select class="form-select" aria-label="Default select example" id="po_type" name="po_type"
-                            required>
-                            <option selected disabled value="">Choose Type</option>
-                            <option value="kitchen">Kitchen</option>
-                            <option value="bathroom">Bathroom</option>
-                            <option value="basement">Basement</option>
-                            <option value="homeaddition">Home Addition</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <h6 for="exampleInputProjectManager">Project Manager</h6>
-                        <select class="form-select" aria-label="Default select example"
-                            id="po_pm_one" name="po_pm_one" placeholder="Project Manager" required>
-                            <option selected disabled value="">Choose Project Manager</option>
-                            <?php 
-                                $sql = "SELECT `user_name` FROM user WHERE user_type = 'pm'";
-                                $result = $conn->query($sql);
-                                if ($result->num_rows > 0) {
-                                    while ($row = $result->fetch_assoc()) {
-                                        echo '<option value="' . $row["user_name"] . '">' . $row["user_name"] . '</option>';
-                                    }
-                                }
-                            ?>
-                        </select>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button type="submit" class="btn btn-primary">Save Project</button>
-                </div>
-                </form>
-            </div>
-        </div>
-    </div>
 
     <!-- Modal Pickup-->
     <div class="modal fade" id="pickupModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
@@ -604,6 +263,58 @@ ini_set('display_errors', 1);
         </div>
     </div>
 
+    <!-- Modal Order Request-->
+    <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+        data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Order Request</h5>
+                </div>
+                <div class="modal-body">
+                <form>
+                        <div class="form-group">
+                            <h6 for="exampleInputJobName">Choose Job Name</h6>
+                            <select class="form-select" aria-label="Default select example" id="exampleInputProjectName" required>
+                                <option selected disabled value="">Choose JOB</option>
+                            <?php 
+                            $sql = "SELECT po_name FROM purchase_order";
+                            $result = $conn->query($sql);
+                            if ($result->num_rows > 0) {
+                                while ($row = $result->fetch_assoc()) {
+                                    echo '<option value="' . $row["po_name"] . '">' . $row["po_name"] . '</option>';
+                                }
+                            }
+                            ?>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <h6 for="exampleInputJobStart">MATERIAL NAME</h6>
+                            <input type="text" class="form-control" id="exampleInputMaterialName"
+                                placeholder="Material Name" required>
+                        </div>
+                        <div class="form-group">
+                            <h6 for="exampleInputQuantity">MATERIAL LINK (Optional)</h6>
+                            <input type="text" class="form-control" id="exampleInputQuantity"
+                                placeholder="Material Link">
+                        </div>
+                        <div class="form-group">
+                            <h6 for="exampleInputQuantity">Description (Optional)</h6>
+                            <input type="text" class="form-control" id="exampleInputQuantity"
+                                placeholder="Material Description">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" style="width: 48%;"
+                                data-bs-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-success" style="width: 48%;">Submit Request</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Create New Item Modal -->
     <div class="modal fade" id="addNewMaterialModal" tabindex="-1" aria-labelledby="addNewMaterialModal"
         aria-hidden="true">
@@ -617,18 +328,17 @@ ini_set('display_errors', 1);
                     <form>
                         <div class="form-group">
                             <h6 for="exampleInputJobName">Choose Job Name</h6>
-                            <select class="form-select" aria-label="Default select example" id="exampleInputProjectName"
-                                required>
+                            <select class="form-select" aria-label="Default select example" id="exampleInputProjectName" required>
                                 <option selected disabled value="">Choose JOB</option>
-                                <?php 
-                                $sql = "SELECT po_name FROM purchase_order";
-                                $result = $conn->query($sql);
-                                if ($result->num_rows > 0) {
-                                    while ($row = $result->fetch_assoc()) {
-                                        echo '<option value="' . $row["po_name"] . '">' . $row["po_name"] . '</option>';
-                                    }
+                            <?php 
+                            $sql = "SELECT po_name FROM purchase_order";
+                            $result = $conn->query($sql);
+                            if ($result->num_rows > 0) {
+                                while ($row = $result->fetch_assoc()) {
+                                    echo '<option value="' . $row["po_name"] . '">' . $row["po_name"] . '</option>';
                                 }
-                                ?>
+                            }
+                            ?>
                             </select>
                         </div>
                         <div class="form-group">
@@ -638,7 +348,7 @@ ini_set('display_errors', 1);
                         </div>
                         <div class="form-group">
                             <h6 for="exampleInputQuantity">QUANTITY</h6>
-                            <input type="text" class="form-control" id="exampleInputQuantity"
+                            <input type="number" class="form-control" id="exampleInputQuantity"
                                 placeholder="Material Quantity" required>
                         </div>
                         <div class="form-group">
@@ -681,37 +391,6 @@ ini_set('display_errors', 1);
         <script src="../assets/js/core/bootstrap.min.js"></script>
         <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
         <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
-        <script src="../assets/js/script.js"></script>
-
-        <?php
-        switch ($_GET['success']) {
-            case "1":
-                echo "
-                <script>
-                    Swal.fire({
-                        icon: 'success',
-                        title: 'Success',
-                        showConfirmButton: false,
-                        timer: 1500
-                    })
-                </script>
-                ";
-                break;
-            case "0":
-                echo "
-                <script>
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Error',
-                        showConfirmButton: false,
-                        timer: 4000
-                    })
-                </script>
-                ";
-                break;
-            default:;
-        }
-        ?>
 
         <script>
         function generateId() {
@@ -751,13 +430,27 @@ ini_set('display_errors', 1);
         </script>
 
         <script>
+        var win = navigator.platform.indexOf('Win') > -1;
+        if (win && document.querySelector('#sidenav-scrollbar')) {
+            var options = {
+                damping: '0.5'
+            }
+            Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+        }
+        </script>
+        <script>
+        $(document).ready(function() {
+            $('#example').DataTable();
+        });
+        </script>
+        <script>
         let scanner; // Declare scanner variable at a higher scope
 
         document.getElementById('pickupModal').addEventListener('shown.bs.modal', function() {
             // Access the camera and start scanning when the modal is shown
             navigator.mediaDevices.getUserMedia({
                     video: {
-                        facingMode: { exact: 'environment' }
+                        facingMode: 'environment'
                     }
                 })
                 .then((stream) => {
@@ -780,7 +473,8 @@ ini_set('display_errors', 1);
                         } else {
                             // Display an alert for wrong QR code
                             alert(
-                                'Wrong QR code scanned. Please scan a QR code starting with "1244".');
+                                'Wrong QR code scanned. Please scan a QR code starting with "1244".'
+                            );
                         }
                     });
 
@@ -811,23 +505,7 @@ ini_set('display_errors', 1);
             stopCamera();
         });
         </script>
-
-
-        <script>
-        var win = navigator.platform.indexOf('Win') > -1;
-        if (win && document.querySelector('#sidenav-scrollbar')) {
-            var options = {
-                damping: '0.5'
-            }
-            Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
-        }
-        </script>
-        <script>
-          $(document).ready(function() {
-              $('#example').DataTable();
-          });
-        </script>
-
+        
         <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/quagga"></script>
         <!-- Github buttons -->
