@@ -30,7 +30,16 @@ $material_name = $_GET['material_name'];
 $material_link = $_GET['material_link'];
 $description = $_GET['description'];
 $quantity = $_GET['quantity'];
+
 $reason = $_GET['reason'];
+
+if($_GET['requested_option'] == 'ASAP'){
+    $requested_date = 'ASAP';
+}else{
+    $date = new DateTime($_GET['requested_date']);
+    $formattedDate = $date->format("m-d-Y");
+    $requested_date = $formattedDate;
+}
 
 $from = 'ORDER REQUEST FROM ' . $order_request_from ;
 
@@ -69,7 +78,24 @@ $mail->Body    = "<h4> Please proceed this requested order! </h4>
 if (!$mail->send()) {
     echo 'Email not sent an error was encountered: ' . $mail->ErrorInfo;
 } else {
-    echo 'Message has been sent.';
+    if (isset($_SESSION['username'])) {
+    
+        $query = "INSERT INTO order_request (`order_po`,`order_name`,`order_link`, `order_quantity`, `order_requested_date`, `order_request_created_date`, `order_description`, `order_reason`, `order_request_from`, `order_assigned_to` ,`order_status`) 
+        VALUES ('$po_name','$material_name','$material_link','$quantity','$requested_date', DATE_FORMAT(NOW(), '%m-%d-%Y'), '$description', '$reason', '$username', '$order_manager', 'OPEN')";
+    
+        $res = mysqli_query($conn,$query);
+    
+        if ($res){
+            
+            header("Location:../pages/dashboard.php?success=1") ;
+            exit;
+            
+        }else{
+            $error_message = mysqli_error($conn);
+            header("Location: ../pages/dashboard.php?success=0&error=$error_message");
+            exit;
+        }
+    }
 }
 
 $mail->smtpClose();

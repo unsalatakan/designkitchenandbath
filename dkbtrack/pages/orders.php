@@ -20,7 +20,7 @@ ini_set('display_errors', 1);
     <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
     <link rel="icon" type="image/png" href="../assets/img/favicon.png">
     <title>
-        Soft UI Dashboard by Creative Tim
+        DKB WAREHOUSE TRACK
     </title>
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -113,7 +113,9 @@ ini_set('display_errors', 1);
                     <a class="nav-link active" href="../pages/orders.php">
                         <div
                             class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2V6l-3-4H6zM3.8 6h16.4M16 10a4 4 0 1 1-8 0"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6 2L3 6v14c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2V6l-3-4H6zM3.8 6h16.4M16 10a4 4 0 1 1-8 0"/>
+                            </svg>
                         </div>
                         <span class="nav-link-text ms-1">Orders</span>
                     </a>
@@ -216,11 +218,11 @@ ini_set('display_errors', 1);
                 <div class="col-12">
                     <div class="card mb-4">
                         <div class="card-header pb-0">
-                            <h3>All Orders</h3>
+                            <h3>All Order Requests</h3>
                         </div>
                         <div class="card-body px-0 pt-0 pb-2">
                             <div class="table-responsive px-3 pt-3">
-                                <?php include("../extension/materialstable.php");?>
+                                <?php include("../extension/orderrequesttable.php");?>
                             </div>
                         </div>
                     </div>

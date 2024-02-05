@@ -437,6 +437,31 @@ ini_set('display_errors', 1);
                                 placeholder="Quantity" required>
                         </div>
                         <div class="form-group">
+                            <h6 for="exampleInputQuantity">When do you need?</h6>
+                            <label for="dateSelection">Select Date:</label>
+                            <select id="requested_option" name="requested_option">
+                                <option value="ASAP">ASAP</option>
+                                <option value="selectDate">Select a Date</option>
+                            </select>
+
+                            <!-- If you want to show a date picker when "Select a Date" is chosen -->
+                            <input type="date" id="requested_date" pattern="\d{2}-\d{2}-\d{4}" name="requested_date" style="display: none;">
+
+                            <script>
+                                // JavaScript to toggle visibility of the date picker based on the selected option
+                                document.getElementById('requested_option').addEventListener('change', function () {
+                                    var selectedOption = this.value;
+                                    var dateInput = document.getElementById('requested_date');
+
+                                    if (selectedOption === 'selectDate') {
+                                        dateInput.style.display = 'block';
+                                    } else {
+                                        dateInput.style.display = 'none';
+                                    }
+                                });
+                            </script>
+                        </div>
+                        <div class="form-group">
                             <h6 for="exampleInputQuantity">Description (Optional)</h6>
                             <input type="text" class="form-control" id="description" name="description"
                                 placeholder="Material Description">
