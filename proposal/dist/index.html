@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>DKB Proposal
+  </title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet"><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+
+<!--PEN HEADER-->
+<header class="header">
+  
+  <img src="../assets/logo-1.png" alt="Welcome Image" class="header__image">
+  <h1 class="header__title"></h1>
+</header>
+<!--PEN CONTENT     -->
+<div class="content">
+  <!--content inner-->
+  <div class="content__inner">
+    <div class="container">
+      <!--content title
+      <h2 class="content__title content__title--m-sm">Pick animation type</h2>
+      <!--animations form
+      <form class="pick-animation my-4">
+        <div class="form-row">
+          <div class="col-5 m-auto">
+            <select class="pick-animation__select form-control">
+              <option value="scaleIn" selected="selected">ScaleIn</option>
+              <option value="scaleOut">ScaleOut</option>
+              <option value="slideHorz">SlideHorz</option>
+              <option value="slideVert">SlideVert</option>
+              <option value="fadeIn">FadeIn</option>
+            </select>
+          </div>
+        </div>
+      </form>
+      -->
+      <!--content title-->
+    </div>
+    <div class="container overflow-hidden">
+      <!--multisteps-form-->
+      <div class="multisteps-form">
+        <!--progress bar-->
+        <div class="row">
+          <div class="col-12 col-lg-8 ml-auto mr-auto mb-4">
+            <div class="multisteps-form__progress">
+              <button class="multisteps-form__progress-btn js-active" type="button" title="User Info">Customer Info</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Address">Demolition</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Order Info">Cabinetry</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Comments">Custom Cabinetry</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Comments">Custom Cabinetry</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Comments">Custom Cabinetry</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Comments">Custom Cabinetry</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Comments">Custom Cabinetry</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Comments">Custom Cabinetry</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Comments">Custom Cabinetry</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Comments">Custom Cabinetry</button>
+            </div>
+          </div>
+        </div>
+        <!--form panels-->
+        <div class="row">
+          <div class="col-12 col-lg-8 m-auto">
+            <form class="multisteps-form__form">
+              <!--single form panel-->
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="scaleIn">
+                <h3 class="multisteps-form__title">Customer Information</h3>
+                <div class="multisteps-form__content">
+                  <div class="form-row mt-4">
+                    <div class="col-12 col-sm-6">
+                      <input class="multisteps-form__input form-control" type="text" placeholder="First Name" required/>
+                    </div>
+                    <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                      <input class="multisteps-form__input form-control" type="text" placeholder="Last Name" required/>
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col-12 col-sm-6">
+                      <input class="multisteps-form__input form-control" type="text" placeholder="Phone" required/>
+                    </div>
+                    <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                      <input class="multisteps-form__input form-control" type="email" placeholder="Email" required/>
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col-12 col-sm-6">
+                      <input class="multisteps-form__input form-control" type="text" placeholder="Address" required/>
+                    </div>
+                    <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                      <input class="multisteps-form__input form-control" type="text" placeholder="City" required/>
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col-12 col-sm-6">
+                      <input class="multisteps-form__input form-control" type="text" placeholder="State" required/>
+                    </div>
+                    <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                      <input class="multisteps-form__input form-control" type="text" placeholder="ZIP" required/>
+                    </div>
+                  </div>
+                  <div class="button-row d-flex mt-4">
+                    <button class="btn btn-primary ml-auto js-btn-next" type="submit" title="Next">Next</button>
+                  </div>
+                </div>
+              </div>
+              <!--single form panel-->
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                <h3 class="multisteps-form__title">Demolition</h3>
+                <hr>
+                <div class="multisteps-form__content">
+                <div class="checklist">
+                  <div class="row">
+                    <div class="col-4">
+                      <label><input type="checkbox" name="items[]" value="Vanity"> Vanity</label><br>
+                      <label><input type="checkbox" name="items[]" value="Floors"> Floors</label><br>
+                      <label><input type="checkbox" name="items[]" value="Countertops"> Countertops</label><br>
+                      <label><input type="checkbox" name="items[]" value="Wall Tiles"> Wall Tiles</label><br>
+                      <label><input type="checkbox" name="items[]" value="Linen Closet"> Linen Closet</label><br>
+                      <label><input type="checkbox" name="items[]" value="Drywall"> Drywall</label><br>
+                      <label><input type="checkbox" name="items[]" value="Sub Floors"> Sub Floors</label><br>
+                      <label><input type="checkbox" name="items[]" value="Concrete Boards"> Concrete Boards</label><br>
+                      <label><input type="checkbox" name="items[]" value="Mirrors"> Mirrors</label><br>
+                      <label><input type="checkbox" name="items[]" value="Crown Moulding"> Crown Moulding</label>
+                    </div>
+                    <div class="col-4">
+                      <label><input type="checkbox" name="items[]" value="Tub"> Tub</label><br>
+                      <label><input type="checkbox" name="items[]" value="Shower Base"> Shower Base</label><br>
+                      <label><input type="checkbox" name="items[]" value="Shower Door"> Shower Door</label><br>
+                      <label><input type="checkbox" name="items[]" value="Tub Deck"> Tub Deck</label><br>
+                      <label><input type="checkbox" name="items[]" value="Toilet"> Toilet</label><br>
+                      <label><input type="checkbox" name="items[]" value="Medicine Cabinet"> Medicine Cabinet</label><br>
+                      <label><input type="checkbox" name="items[]" value="Exhaust Fan"> Exhaust Fan</label><br>
+                      <label><input type="checkbox" name="items[]" value="Vanity Lights"> Vanity Lights</label><br>
+                      <label><input type="checkbox" name="items[]" value="Shower Light"> Shower Light</label><br>
+                      <label><input type="checkbox" name="items[]" value="Tub Light"> Tub Light</label>
+                    </div>
+                    <div class="col-4">
+                      <label><input type="checkbox" name="items[]" value="Soffits"> Soffits</label><br>
+                      <label><input type="checkbox" name="items[]" value="Insulation"> Insulation</label><br>
+                      <label><input type="checkbox" name="items[]" value="Knee Wall"> Knee Wall</label><br>
+                      <label><input type="checkbox" name="items[]" value="Bidet"> Bidet</label><br>
+                      <label><input type="checkbox" name="items[]" value="Shower Rod"> Shower Rod</label><br>
+                      <label><input type="checkbox" name="items[]" value="Tissue Holder"> Tissue Holder</label><br>
+                      <label><input type="checkbox" name="items[]" value="Towel Rods"> Towel Rods</label><br>
+                      <label><input type="checkbox" name="items[]" value="Towel Rings"> Towel Rings</label><br>
+                      <label><input type="checkbox" name="items[]" value="Robe Hooks"> Robe Hooks</label><br>
+                      <label><input type="checkbox" name="items[]" value="Wallpaper"> Wallpaper</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="checklist">
+                  <div class="row">
+                    <div class="col-6">
+                      <label>
+                        <input type="checkbox" name="items[]" value="Standard Wall">
+                        Standard Wall
+                        <input type="text" class="checklist-input" placeholder="">
+                      </label><br>
+                      <label>
+                        <input type="checkbox" name="items[]" value="Load Bearing Wall">
+                        Load Bearing Wall
+                        <input type="text" class="checklist-input" placeholder="">
+                      </label><br>
+                      <label>
+                        <input type="checkbox" name="items[]" value="Window/Door Trim">
+                        Window/Door Trim
+                        <input type="text" class="checklist-input" placeholder="">
+                      </label><br>
+                      <label>
+                        <input type="checkbox" name="items[]" value="Window/Door">
+                        Window/Door
+                        <input type="text" class="checklist-input" placeholder="">
+                      </label><br>
+                     
+                    </div>
+                    <div class="col-6">
+                      <label>
+                        <input type="checkbox" name="items[]" value="Other">
+                        Other
+                        <input type="text" class="checklist-input" placeholder="">
+                      </label><br>
+                      <label>
+                        <input type="checkbox" name="items[]" value="Other">
+                        Other
+                        <input type="text" class="checklist-input" placeholder="">
+                      </label><br>
+                      <label>
+                        <input type="checkbox" name="items[]" value="Other">
+                        Other
+                        <input type="text" class="checklist-input" placeholder="">
+                      </label><br>
+                      <label>
+                        <input type="checkbox" name="items[]" value="Base Moulding">
+                        Base Moulding
+                        <input type="text" class="checklist-input" placeholder="">
+                      </label>
+                      <label>
+                        <input type="checkbox" name="items[]" value="Walk-in Closet">
+                        Walk-in Closet
+                        <input type="text" class="checklist-input" placeholder="">
+                      </label><br>
+                    </div>
+                  </div>
+                  <hr>
+                </div>
+                <div class="form-row">
+                  <h4 class="multisteps-form__title">Customer Will Demo/Haul the Following:</h4>
+                  <textarea class="form-control" name="demolitionNotes" rows="4" placeholder="Add any additional notes or requirements related to demolition..."></textarea>
+                </div>
+                <div class="form-row mt-2">
+                  <h4 class="multisteps-form__title">Notes</h4>
+                  <textarea class="form-control" name="demolitionNotes" rows="4" placeholder="Add any additional notes or requirements related to demolition..."></textarea>
+                </div>
+                  <div class="button-row d-flex mt-4">
+                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                    <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                  </div>
+                </div>
+              </div>
+              <!--single form panel-->
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                <h3 class="multisteps-form__title">Cabinetry</h3>
+                <div class="multisteps-form__content">
+                  <!-- Dropdown for Cabinetry Brand -->
+                  <div class="form-row mt-4">
+                    <div class="col-12">
+                      <label for="cabinetryBrand">Cabinetry Brand</label>
+                      <select id="cabinetryBrand" name="cabinetryBrand" class="form-control" required>
+                        <option value="" disabled selected>Select a Brand</option>
+                        <option value="Fabuwood">Fabuwood</option>
+                        <option value="Cubitac">Cubitac</option>
+                        <option value="Diamond">Diamond</option>
+                        <option value="Decora">Decora</option>
+                        <option value="Legacy Crafted">Legacy Crafted</option>
+                        <option value="Mantra">Mantra</option>
+                        <option value="Tribeca">Tribeca</option>
+                        <option value="Forever Mark">Forever Mark</option>
+                      </select>
+                    </div>
+                  </div>
+                  
+                  <!-- Textboxes for Wall and Base Door Styles and Colors -->
+                  <div class="form-row mt-4">
+                    <!-- Left Side -->
+                    <div class="col-12 col-md-6">
+                      <label for="wallDoorStyle">Wall Door Style</label>
+                      <input type="text" id="wallDoorStyle" name="wallDoorStyle" class="form-control" placeholder="Enter Wall Door Style" required>
+                      
+                      <label for="wallColorStain" class="mt-3">Wall Color/Stain</label>
+                      <input type="text" id="wallColorStain" name="wallColorStain" class="form-control" placeholder="Enter Wall Color/Stain" required>
+                    </div>
+                    
+                    <!-- Right Side -->
+                    <div class="col-12 col-md-6">
+                      <label for="baseDoorStyle">Base Door Style</label>
+                      <input type="text" id="baseDoorStyle" name="baseDoorStyle" class="form-control" placeholder="Enter Base Door Style" required>
+                      
+                      <label for="baseColorStain" class="mt-3">Base Color/Stain</label>
+                      <input type="text" id="baseColorStain" name="baseColorStain" class="form-control" placeholder="Enter Base Color/Stain" required>
+                    </div>
+                  </div>
+                  <!-- Additional Cabinetry Options -->
+                  <div class="form-row mt-4">
+                    <div class="checklist">
+                      <div class="row">
+                        <div class="col-4">
+                          <label><input type="checkbox" name="cabinetryItems[]" value="Hamper Pull-Out"> Hamper Pull-Out</label><br>
+                          <label><input type="checkbox" name="cabinetryItems[]" value="Trash Pull-Out"> Trash Pull-Out</label><br>
+                          <label><input type="checkbox" name="cabinetryItems[]" value="Linen Closet"> Linen Closet</label><br>
+                          <label><input type="checkbox" name="cabinetryItems[]" value="Crown Moulding"> Crown Moulding <input type="text" class="checklist-input" placeholder=""></label><br>
+                          <label><input type="checkbox" name="cabinetryItems[]" value="Toilet Topper with Shelf"> Toilet Topper w/ Shelf</label><br>
+                        </div>
+                        <div class="col-4">
+                          <label><input type="checkbox" name="cabinetryItems[]" value="Toilet Topper with Towel Bar"> Toilet Topper w/ Towel Bar</label><br>
+                          <label><input type="checkbox" name="cabinetryItems[]" value="Matching Mirror"> Matching Mirror</label><br>
+                          <label><input type="checkbox" name="cabinetryItems[]" value="Matching Medicine Cabinet"> Matching Medicine Cabinet</label><br>
+                          <label><input type="checkbox" name="cabinetryItems[]" value="Drawer Hardware"> Drawer Hardware <input type="text" class="checklist-input" placeholder=""></label><br>
+                          <label><input type="checkbox" name="cabinetryItems[]" value="Door Hardware"> Door Hardware <input type="text" class="checklist-input" placeholder=""></label><br>
+                        </div>
+                        <div class="col-4">
+                          <label><input type="checkbox" name="cabinetryItems[]" value="Other"> Other <input type="text" class="checklist-input" placeholder=""></label><br>
+                          <label><input type="checkbox" name="cabinetryItems[]" value="Pull-Out Trays Qty"> Pull-Out Trays  <input type="number" class="checklist-input" min="0" step="1" placeholder="0"></label><br>
+                          <label><input type="checkbox" name="cabinetryItems[]" value="Misc Organize Qty"> Misc. Organize <input type="number" class="checklist-input" min="0" step="1" placeholder="0"></label><br>
+                          <label><input type="checkbox" name="cabinetryItems[]" value="Sink Caddy Qty"> Sink Caddy <input type="number" class="checklist-input" min="0" step="1" placeholder="0"></label><br>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col-12">
+                    <h4 class="multisteps-form__title">Cabinet Modifications and Other Carpentry</h4>
+                    <div class="checklist">
+                      <div class="row">
+                        <!-- Two-column checklist -->
+                        <div class="col-6">
+                          <label><input type="checkbox" name="carpentryItems[]" value="Install Toe Kick"> Install Toe Kick</label><br>
+                          <label><input type="checkbox" name="carpentryItems[]" value="Modify/Build New Tub Deck"> Modify/Build New Tub Deck</label><br>
+                          <label><input type="checkbox" name="carpentryItems[]" value="Shoe Moulding"> Shoe Moulding</label><br>
+                          <label><input type="checkbox" name="carpentryItems[]" value="Standard Closet Shelves"> Standard Closet Shelves</label><br>
+                          <label><input type="checkbox" name="carpentryItems[]" value="Custom Walk-In Closet"> Custom Walk-In Closet</label><br>
+                        </div>
+                        <div class="col-6">
+                          <label><input type="checkbox" name="carpentryItems[]" value="New Window(s) & Trim"> New Window(s) & Trim</label><br>
+                          <label><input type="checkbox" name="carpentryItems[]" value="New Door(s) & Trim"> New Door(s) & Trim</label><br>
+                          <label><input type="checkbox" name="carpentryItems[]" value="Frame Existing Mirror"> Frame Existing Mirror</label><br>
+                          <label><input type="checkbox" name="carpentryItems[]" value="Frame New Mirror"> Frame New Mirror</label><br>
+                          <label><input type="checkbox" name="carpentryItems[]" value="Install Door Hardware"> Install Door Hardware</label><br>
+                        </div>
+                      </div>
+                      
+                      <!-- Text input checklist items, each on a new row -->
+                      <div class="row ">
+                        <div class="col-12">
+                          <label>
+                            <input type="checkbox" name="carpentryItems[]" value="Modify Cabinet(s)">
+                            Modify Cabinet(s)
+                            <input type="text" class="checklist-input" placeholder="Enter details...">
+                          </label><br>
+                          <label>
+                            <input type="checkbox" name="carpentryItems[]" value="New Wood Trim">
+                            New Wood Trim
+                            <input type="text" class="checklist-input" placeholder="Enter details...">
+                          </label><br>
+                          <label>
+                            <input type="checkbox" name="carpentryItems[]" value="Other">
+                            Other
+                            <input type="text" class="checklist-input" placeholder="Enter details...">
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  
+                  <!-- Navigation Buttons -->
+                  <div class="row">
+                    <div class="button-row d-flex mt-4 col-12">
+                      <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                      <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!--single form panel-->
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                <h3 class="multisteps-form__title">Standart & Custom Cabinetry</h3>
+                <div class="multisteps-form__content">
+                  <div class="form-row mt-4">
+                    <div class="checklist col-12">
+                      <div class="row">
+                        <div class="col-12">
+                          <label>
+                            <input type="checkbox" name="customCabinetry[]" value="Build New Wall">
+                            Build New Wall
+                            <input type="text" class="checklist-input" placeholder="Enter details...">
+                          </label><br>
+                          <label>
+                            <input type="checkbox" name="customCabinetry[]" value="Build Knee Wall">
+                            Build Knee Wall
+                            <input type="text" class="checklist-input" placeholder="Enter details...">
+                          </label><br>
+                          <label>
+                            <input type="checkbox" name="customCabinetry[]" value="Build Soffit">
+                            Build Soffit
+                            <input type="text" class="checklist-input" placeholder="Enter details...">
+                          </label><br>
+                          <label>
+                            <input type="checkbox" name="customCabinetry[]" value="Enclose Opening">
+                            Enclose Opening
+                            <input type="text" class="checklist-input" placeholder="Enter details...">
+                          </label><br>
+                          <label>
+                            <input type="checkbox" name="customCabinetry[]" value="Install Room Crown Moulding">
+                            Install Room Crown Moulding
+                            <input type="text" class="checklist-input" placeholder="Enter details...">
+                          </label><br>
+                          <label>
+                            <input type="checkbox" name="customCabinetry[]" value="Install Room Base Moulding">
+                            Install Room Base Moulding
+                            <input type="text" class="checklist-input" placeholder="Enter details...">
+                          </label><br>
+                          <label>
+                            <input type="checkbox" name="customCabinetry[]" value="Cut Door for Clearance">
+                            Cut Door for Clearance
+                            <input type="text" class="checklist-input" placeholder="Enter details...">
+                          </label><br>
+                          <label>
+                            <input type="checkbox" name="customCabinetry[]" value="Cut Trim">
+                            Cut Trim
+                            <input type="text" class="checklist-input" placeholder="Enter details...">
+                          </label><br>
+                          <label>
+                            <input type="checkbox" name="customCabinetry[]" value="Other">
+                            Other
+                            <input type="text" class="checklist-input" placeholder="Enter details...">
+                          </label><br>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="form-row mt-4">
+                    <h4 class="multisteps-form__title">Other Construction and Finish Materials</h4>
+                    <div class="checklist">
+                      <div class="row">
+                        <div class="col-12">
+                          <label>
+                            <input type="checkbox" name="constructionMaterials[]" value="Supply and Install Concrete Boards">
+                            Supply and Install Concrete Board(s)
+                            <input type="text" class="checklist-input" placeholder="Enter details...">
+                          </label><br>
+                          <label>
+                            <input type="checkbox" name="constructionMaterials[]" value="Replace Damaged Subfloor Sqft">
+                            Replace Damaged Subfloor Sqft
+                            <input type="text" class="checklist-input" placeholder="Enter sqft...">
+                          </label><br>
+                          <label>
+                            <input type="checkbox" name="constructionMaterials[]" value="Install New Window(s)">
+                            Install New Window(s) QTY
+                            <input type="number" class="checklist-input" placeholder="0" min="0" step="1">
+                            Supplied By <input type="text" class="checklist-input" placeholder="Enter supplier...">
+                            Type/Style <input type="text" class="checklist-input" placeholder="Enter type/style...">
+                            Color <input type="text" class="checklist-input" placeholder="Enter color...">
+                          </label><br>
+                          <label>
+                            <input type="checkbox" name="constructionMaterials[]" value="Install New Door(s)">
+                            Install New Door(s) QTY
+                            <input type="number" class="checklist-input" placeholder="0" min="0" step="1">
+                            Supplied By <input type="text" class="checklist-input" placeholder="Enter supplier...">
+                            Type/Style <input type="text" class="checklist-input" placeholder="Enter type/style...">
+                            Color <input type="text" class="checklist-input" placeholder="Enter color...">
+                          </label><br>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="form-row mt-1">
+                    <h4 class="multisteps-form__title">Notes</h4>
+                    <textarea class="form-control" name="constructionNotes" rows="4" placeholder="Add any additional notes or requirements..."></textarea>
+                  </div>
+                  <div class="button-row d-flex mt-4">
+                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                    <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                    <!-- Send Button
+                    <button class="btn btn-success ml-auto" type="button" title="Send">Send</button>
+                    -->
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'></script>
+<script  src="./script.js"></script>
+
+</body>
+</html>
